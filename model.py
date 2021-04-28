@@ -1,13 +1,12 @@
 from flask_sqlalchemy import SQLAlchemy 
 
-def thisFunc():
-    return thisFunc
+db = SQLAlchemy()
+# model.py 
+# test psql like movie ratings
+class 
 
-def anotherFunc():
-    return anotherFunc
 
-def comeOn():
-    return "dead"
+if __name__ == '__main__':
+    from server import app
 
-def imdying():
-    return xjkssfhlaw
+    # connect_to_db(app)
