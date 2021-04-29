@@ -15,9 +15,12 @@ class Creation(db.Model):
 
     creation_form_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     painting_name = db.Column(db.String, unique=True)
-    canvas_id = db.Column(db.Integer)
-    weather_id = db.Column(db.Integer)
-    paint_id = db.Column(db.Integer)
+    canvas_id = db.Column(db.Integer,
+                        db.ForeignKey('canvas_size.canvas_id'))
+    weather_id = db.Column(db.Integer,
+                            db.ForeignKey('weather.weather_id'))
+    paint_id = db.Column(db.Integer,
+                            db.ForeignKey('paint_type.paint_id'))
 
     # creation_form = a list of creation objects 
 
@@ -33,6 +36,8 @@ class Canvas(db.Model):
     canvas_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     size = db.Column(db.Integer)
     canvas_time = db.Column(db.Integer)
+
+    creation_form = db.relationship('Creation')
 
     # canvas = options for user to select canvas type that will add to dry time
 
@@ -76,7 +81,8 @@ class Drying(db.Model):
     __tablename__ = "dry_time"
 
     dry_time_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    creation_form_id = db.Column(db.Integer)
+    creation_form_id = db.Column(db.Integer,
+                                  db.ForeignKey('creation_form.creation_form_id')  )
 
     # dry_time = populating final dry time for the result table
 
@@ -91,7 +97,8 @@ class Results(db.Model):
     __tablename__ = "final_result"
 
     final_result_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    dry_time_id = db.Column(db.Integer)
+    dry_time_id = db.Column(db.Integer,
+                            db.ForeignKey('dry_time.dry_time_id'))
 
 # final_result = user's full calculation 
 
