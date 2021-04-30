@@ -25,6 +25,10 @@ def create_creation_form(painting_name, canvas_id, weather_id, paint_id):
     db.session.add(creation_form)
     db.session.commit()
 
+    return creation_form
+
+
+def 
 
 if __name__ == '__main__':
     from server import app
