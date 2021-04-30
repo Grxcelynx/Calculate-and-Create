@@ -23,10 +23,10 @@ class CreationForm(db.Model):
                             db.ForeignKey('paint_type.paint_id'))
     
     canvas_size = db.relationship("CanvasSize", back_populates="creation_form")
-    weather = db.relationship("CanvasSize", back_populates="creation_form")
-    paint_type = db.relationship("CanvasSize", back_populates="creation_form")
+    weather = db.relationship("Weather", back_populates="creation_form")
+    paint_type = db.relationship("PaintType", back_populates="creation_form")
 
-    dry_time = db.relationship('DryTime', uselist=False, back_populates='creation_form_id')
+    dry_time = db.relationship('DryTime', back_populates='creation_form_id')
 
 
 
@@ -45,7 +45,7 @@ class CanvasSize(db.Model):
     size = db.Column(db.Integer)
     canvas_time = db.Column(db.Integer)
 
-    creation_form = db.relationship('CreationForm', uselist=False, back_populates='canvas_size')
+    creation_form = db.relationship('CreationForm', back_populates='canvas_size')
 
     # child = relationship("Child", uselist=False, back_populates="parent")
 
@@ -64,7 +64,7 @@ class Weather(db.Model):
     weather_type = db.Column(db.String)
     weather_time = db.Column(db.Integer)
 
-    creation_form = db.relationship('CreationForm', uselist=False, back_populates='weather')
+    creation_form = db.relationship('CreationForm', back_populates='weather')
     # weather = options for the user to select the climate they are in that will determine the dry time
 
     def __repr__(self):
@@ -103,7 +103,7 @@ class DryTime(db.Model):
 
     creation_form = db.relationship("CreationForm", back_populates="dry_time")
 
-    final_result = db.relationship('FinalResult', uselist=False, back_populates='dry_time_id')
+    # final_result = db.relationship('FinalResult', uselist=False, back_populates='dry_time_id')
 
     def __repr__(self):
         return f'<DryTime dry_time_id ={self.dry_time_id} creation_form_id={self.creation_form_id}>'
@@ -121,7 +121,7 @@ class FinalResult(db.Model):
 
 # final_result = user's full calculation 
 
-    dry_time = db.relationship('DryTime', back_populates='final_result')
+    # dry_time = db.relationship('DryTime', back_populates='final_result')
 
 
 def __repr__(self):
