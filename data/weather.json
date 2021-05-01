@@ -1,16 +1,16 @@
 [
     {
         "weather_type" : "Humid",
-        "weather_time" : "25"
+        "weather_time" : "25 Min."
     },
 
     {
         "weather_type" : "Hot",
-        "weather_time" : "0"
+        "weather_time" : "0 Min."
     },
 
     {
         "weather_type" : "Cold",
-        "weather_time" : "15"
+        "weather_time" : "15 Min."
     }
 ]

@@ -1,0 +1,33 @@
+[
+    {
+        "paint_type" : "Acrylic",
+        "paint_time" : "25 Min."
+    },
+
+    {
+        "paint_type" : "Pure Oil",
+        "paint_time" : "24 Hrs."
+
+    },
+
+    {
+        "paint_type" : "Watercolor",
+        "paint_time" : "12 Min."
+    },
+
+    {
+        "paint_type" : "Pure Gouache",
+        "paint_time" : "20 Min"
+    },
+
+    {
+        "paint_type" : "Oil W/ Paint Thinner",
+        "paint_time" : "12 Hrs."
+    },
+
+    {
+        "paint_type" : "Gouache W/ Water",
+        "paint_time" : "15"
+    }
+  
+]
