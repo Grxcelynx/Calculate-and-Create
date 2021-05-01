@@ -127,7 +127,7 @@ class FinalResult(db.Model):
 def __repr__(self):
     return f'<FinalResult final_result_id ={self.final_result_id} dry_time_id={self.dry_time_id}>'
 
-def connect_to_db(flask_app, db_uri='postgresql:///creation_form', echo=True):
+def connect_to_db(flask_app, db_uri='postgresql:///calculate_n_create', echo=True):
     flask_app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
     flask_app.config['SQLALCHEMY_ECHO'] = echo
     flask_app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
