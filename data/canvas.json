@@ -1,0 +1,16 @@
+[
+   {
+    "canvas_size" : "Small: 5x7 - 11x14",
+    "canvas_time" : "0"
+   },
+
+   {
+       "canvas_size" : "Medium: 16x20 - 24x48",
+       "canvas_time" : "15"
+   }, 
+
+   {
+       "canvas_size" : "Large: 48x48 & Up",
+       "canvas_time" : "45"
+   }
+]
