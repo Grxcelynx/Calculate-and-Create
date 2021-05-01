@@ -14,7 +14,7 @@ class CreationForm(db.Model):
     __tablename__ = "creation_form"
 
     creation_form_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    painting_name = db.Column(db.String, unique=True)
+    painting_name = db.Column(db.Text, unique=True)
     canvas_id = db.Column(db.Integer,
                         db.ForeignKey('canvas_size.canvas_id'))
     weather_id = db.Column(db.Integer,
@@ -42,7 +42,7 @@ class CanvasSize(db.Model):
     __tablename__ = "canvas_size"
 
     canvas_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    size = db.Column(db.Integer)
+    size = db.Column(db.Text)
     canvas_time = db.Column(db.Integer)
 
     creation_form = db.relationship('CreationForm', back_populates='canvas_size')
@@ -61,7 +61,7 @@ class Weather(db.Model):
     __tablename__ = "weather"
 
     weather_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    weather_type = db.Column(db.String)
+    weather_type = db.Column(db.Text)
     weather_time = db.Column(db.Integer)
 
     creation_form = db.relationship('CreationForm', back_populates='weather')
@@ -77,7 +77,7 @@ class PaintType(db.Model):
     __tablename__ = "paint_type"
 
     paint_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    type_of_paint = db.Column(db.String, unique=True)
+    type_of_paint = db.Column(db.Text, unique=True)
     #not sure if i need unique for the different paint type nanes
     paint_time = db.Column(db.Integer)
     #will i need unique for paint dry time too?
