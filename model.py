@@ -26,7 +26,7 @@ class CreationForm(db.Model):
     weather = db.relationship("Weather", back_populates="creation_form")
     paint_type = db.relationship("PaintType", back_populates="creation_form")
 
-    dry_time = db.relationship('DryTime', back_populates='creation_form')
+    final_result = db.relationship('FinalResult', back_populates='creation_form')
 
 
 
@@ -89,24 +89,25 @@ class PaintType(db.Model):
     def __repr__(self):
         return f'<PaintType paint_id ={self.paint_id} type_of_paint={self.type_of_paint}>'
 
+############# NOT USING RIGHT NOW - MAY BE USEFUL LATER #############
 
-class DryTime(db.Model):
-    """takes in all factors from creation form and adds together for final dry time"""
+# class DryTime(db.Model):
+#     """takes in all factors from creation form and adds together for final dry time"""
 
-    __tablename__ = "dry_time"
+#     __tablename__ = "dry_time"
 
-    dry_time_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    creation_form_id = db.Column(db.Integer,
-                                  db.ForeignKey('creation_form.creation_form_id')  )
+#     dry_time_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+#     creation_form_id = db.Column(db.Integer,
+#                                   db.ForeignKey('creation_form.creation_form_id')  )
 
-    # dry_time = populating final dry time for the result table
+#     # dry_time = populating final dry time for the result table
 
-    creation_form = db.relationship("CreationForm", back_populates="dry_time")
+#     creation_form = db.relationship("CreationForm", back_populates="dry_time")
 
-    final_result = db.relationship('FinalResult', back_populates='dry_time')
+#     final_result = db.relationship('FinalResult', back_populates='dry_time')
 
-    def __repr__(self):
-        return f'<DryTime dry_time_id ={self.dry_time_id} creation_form_id={self.creation_form_id}>'
+#     def __repr__(self):
+#         return f'<DryTime dry_time_id ={self.dry_time_id} creation_form_id={self.creation_form_id}>'
 
 
 
@@ -116,12 +117,12 @@ class FinalResult(db.Model):
     __tablename__ = "final_result"
 
     final_result_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    dry_time_id = db.Column(db.Integer,
-                            db.ForeignKey('dry_time.dry_time_id'))
+    total_dry_time = db.Column(db.Integer)
+    creation_form_id = db.Column(db.ForeignKey('creation_form.creation_form_id')
 
 # final_result = user's full calculation 
-
-    dry_time = db.relationship('DryTime', back_populates='final_result')
+    creation_form = db.relationship('CreationForm', back_populates='final_result')
+    # dry_time = db.relationship('DryTime', back_populates='final_result') - NOT USING TABLE ANYMORE
 
 
 def __repr__(self):
