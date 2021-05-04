@@ -42,7 +42,7 @@ class CanvasSize(db.Model):
     __tablename__ = "canvas_size"
 
     canvas_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    size = db.Column(db.Text)
+    size = db.Column(db.Text, unique=True)
     canvas_time = db.Column(db.Integer)
 
     creation_form = db.relationship('CreationForm', back_populates='canvas_size')
@@ -61,7 +61,7 @@ class Weather(db.Model):
     __tablename__ = "weather"
 
     weather_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    weather_type = db.Column(db.Text)
+    weather_type = db.Column(db.Text, unique=True)
     weather_time = db.Column(db.Integer)
 
     creation_form = db.relationship('CreationForm', back_populates='weather')
