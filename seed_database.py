@@ -22,10 +22,23 @@ with open('<paints>) as p:
 #Create paint types, store them in list
 paints_in_db = []
 for paints in paint_types:
-    paint_type = cc['paint_type']
-    dry_time = cc['"dry_time"']
+    paint_type = paints['paint_type']
+    dry_time = paints['"dry_time"']
 
  
     db_paint= crud.create_paint_types(paint_type, dry_time)  <---this is the crud function for creating the table row of painttype
 
     cc_in_db.append(db_credit_card)  ### maybe irrelevant?
+
+with open('<weather>) as w:
+    weather_conditions = json.loads(w.read()) 
+#Create paint types, store them in list
+weather_in_db = []
+for weather in weather_conditions:
+    weather_type = weather['weather_type']
+    weather_time = weather['"weather_time"']
+
+ 
+    db_weather= crud.create_weather_types(weather_type, weather_time) 
+
+

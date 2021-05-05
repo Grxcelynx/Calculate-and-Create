@@ -5,10 +5,42 @@ from model import db, FinalResult, DryTime, CreationForm, CanvasSize, Weather, P
 #Create functions for each  type that creates those paint/canvas/weather rows
 #Read json file - insert to database
 
-def create_paint_types(paint_type, dry_time):
+###EXAMPLE####
+# def create_bank(bank_name, approval_rule_num_accounts,    approval_rule_time_months, max_accounts):
+#     """Create and return a new bank."""
 
-def create weather_type
-def create canvas_type
+#     bank = Bank(bank_name=bank_name, approval_rule_num_accounts=approval_rule_num_accounts, approval_rule_time_months=approval_rule_time_months, max_accounts=max_accounts)
+
+#     db.session.add(bank)
+#     db.session.commit()
+
+#     return bank
+
+def create_paint_types(paint_type, dry_time):
+    """Creating and returning paint types that user selects """
+
+    paint = Paint(paint_type=paint_type, dry_time=dry_time)
+
+    db.session.add(paint)
+    db.session.commit()
+
+    return paint
+
+def create_weather_type(weather_type, weather_time):
+    """Creating and returning all weather conditions user selects"""
+
+    weather = Weather(weather_type=weather_type, weather_time=weather_time)
+
+    db.session.add(weather)
+    db.commit()
+
+def create_canvas_type(canvas_size, canvas_time):
+    """Creating and returning all canvas sizes user selects"""
+
+    canvas = Canvas(canvas_size=canvas_size, canvas_time=canvas_time)
+
+    db.session.add(canvas)
+    db.commit()
 
 #READ functions for paint/canvas/weather
 def get_weather_types():
