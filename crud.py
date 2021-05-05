@@ -34,6 +34,8 @@ def create_weather_type(weather_type, weather_time):
     db.session.add(weather)
     db.commit()
 
+    return weather
+
 def create_canvas_type(canvas_size, canvas_time):
     """Creating and returning all canvas sizes user selects"""
 
@@ -41,6 +43,8 @@ def create_canvas_type(canvas_size, canvas_time):
 
     db.session.add(canvas)
     db.commit()
+
+    return canvas
 
 #READ functions for paint/canvas/weather
 def get_weather_types():

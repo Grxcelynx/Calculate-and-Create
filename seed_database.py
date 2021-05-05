@@ -32,7 +32,7 @@ for paints in paint_types:
 
 with open('<weather>) as w:
     weather_conditions = json.loads(w.read()) 
-#Create paint types, store them in list
+#Create weather conditions, store them in list
 weather_in_db = []
 for weather in weather_conditions:
     weather_type = weather['weather_type']
@@ -40,5 +40,17 @@ for weather in weather_conditions:
 
  
     db_weather= crud.create_weather_types(weather_type, weather_time) 
+
+
+with open('<canvas>) as c:
+    canvas_sizes = json.loads(c.read()) 
+#Create canvas sizes, store them in list
+canvas_in_db = []
+for canvas in canvas_sizes:
+    canvas_size = canvas['canvas_size']
+    canvas_time = canvas['"canvas_time"']
+
+ 
+    db_canvas= crud.create_canvas_type(canvas_size, canvas_time) 
 
 
