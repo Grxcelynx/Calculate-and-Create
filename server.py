@@ -30,6 +30,23 @@ def get_paint_types():
 
     return jsonify(paint_types)
 
+
+@app.route('/get_weather')
+def get_weather():
+""" Returns object of Weather conditions from database"""
+    weather_types = crud.get_weather_types()
+
+    return jsonify(weather_types)
+
+
+@app.route('/get_canvas_sizes')
+def get_canvas_sizes():
+""" Returns object of Canvas sizes from database"""
+    canvas_sizes = crud.get_canvas_sizes()
+
+    return jsonify(canvas_sizes)
+
+    
 # POst methods gather info from the front end to give eto the datbase
 @app.route('/creation_form', methods=["POST"])
 def collect_painting_input():

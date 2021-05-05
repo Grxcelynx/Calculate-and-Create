@@ -17,15 +17,15 @@ model.db.create_all()
 #first func - load bank data from json file 
 
 # Load paint data from JSON file
-with open('<FILE NAME>) as f:
-    paint_types = json.loads(f.read()) 
-#Create banks, store them in list
-cc_in_db = []
-for cc in paint_types:
+with open('<paints>) as p:
+    paint_types = json.loads(p.read()) 
+#Create paint types, store them in list
+paints_in_db = []
+for paints in paint_types:
     paint_type = cc['paint_type']
     dry_time = cc['"dry_time"']
 
  
-    db_paint= crud.create_paint  <---this is the crud function for creating the table row of painttype
+    db_paint= crud.create_paint_types(paint_type, dry_time)  <---this is the crud function for creating the table row of painttype
 
     cc_in_db.append(db_credit_card)  ### maybe irrelevant?

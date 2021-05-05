@@ -5,7 +5,8 @@ from model import db, FinalResult, DryTime, CreationForm, CanvasSize, Weather, P
 #Create functions for each  type that creates those paint/canvas/weather rows
 #Read json file - insert to database
 
-def create paint(paint type, dry time)
+def create_paint_types(paint_type, dry_time):
+
 def create weather_type
 def create canvas_type
 
@@ -20,7 +21,7 @@ def get_canvas_sizes():
     return CanvasSize.query.all()
 
 
-def get_paints():
+def get_paint_types():
     """Return all paint types."""
 
     return PaintType.query.all()
