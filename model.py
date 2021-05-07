@@ -49,7 +49,7 @@ class CanvasSize(db.Model):
     # canvas = options for user to select canvas type that will add to dry time
 
     def __repr__(self):
-        return f'<CanvasSize canvas_id ={self.canvas_id} size={self.size}>'
+        return f'<CanvasSize canvas_id ={self.canvas_id} size={self.canvas_size}>'
 
 
 class Weather(db.Model):

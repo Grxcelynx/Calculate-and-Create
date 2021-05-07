@@ -5,16 +5,7 @@ from model import db, FinalResult, CreationForm, CanvasSize, Weather, PaintType,
 #Create functions for each  type that creates those paint/canvas/weather rows
 #Read json file - insert to database
 
-###EXAMPLE####
-# def create_bank(bank_name, approval_rule_num_accounts,    approval_rule_time_months, max_accounts):
-#     """Create and return a new bank."""
 
-#     bank = Bank(bank_name=bank_name, approval_rule_num_accounts=approval_rule_num_accounts, approval_rule_time_months=approval_rule_time_months, max_accounts=max_accounts)
-
-#     db.session.add(bank)
-#     db.session.commit()
-
-#     return bank
 
 def create_paint_types(paint_type, paint_time):
     """Creating and returning paint types that user selects """

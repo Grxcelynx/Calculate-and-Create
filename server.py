@@ -51,7 +51,7 @@ def get_canvas_sizes():
     """ Returns object of Canvas sizes from database"""
     canvas_sizes = crud.get_canvas_sizes()
     all_canvas_info = []
-    for canvas in all_canvas_info:
+    for canvas in canvas_sizes:
         all_canvas_info.append(canvas.canvas_size)
 
     return jsonify(all_canvas_info)
