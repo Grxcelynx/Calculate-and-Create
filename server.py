@@ -28,27 +28,33 @@ def homepage():
 def get_paint_types():
     """ Returns object of PaintTypes from database"""
     paint_types = crud.get_paint_types()
-    x = []
+    all_paint_info= []
     for paint in paint_types:
-        x.append(paint.paint_type)
+        all_paint_info.append(paint.paint_type)
     # return json.dumps(paint_types)
-    return jsonify(x)
+    return jsonify(all_paint_info)
 
 
 @app.route('/get_weather')
 def get_weather():
     """ Returns object of Weather conditions from database"""
     weather_types = crud.get_weather_types()
+    all_weather_info = []
+    for weather in weather_types:
+        all_weather_info.append(weather.weather_type)
 
-    return jsonify(weather_types)
+    return jsonify(all_weather_info)
 
 
 @app.route('/get_canvas_sizes')
 def get_canvas_sizes():
     """ Returns object of Canvas sizes from database"""
     canvas_sizes = crud.get_canvas_sizes()
+    all_canvas_info = []
+    for canvas in all_canvas_info:
+        all_canvas_info.append(canvas.canvas_size)
 
-    return jsonify(canvas_sizes)
+    return jsonify(all_canvas_info)
 
     
 # POst methods gather info from the front end to give eto the datbase
