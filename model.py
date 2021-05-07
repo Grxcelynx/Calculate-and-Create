@@ -1,10 +1,7 @@
 from flask_sqlalchemy import SQLAlchemy 
 
 db = SQLAlchemy()
-# model.py 
-# test psql like movie ratings
-# Make reltionships to other tables - DONE
-#figure out f strings - DONE 
+
 
 
 
@@ -42,7 +39,7 @@ class CanvasSize(db.Model):
     __tablename__ = "canvas_size"
 
     canvas_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    size = db.Column(db.Text, unique=True)
+    canvas_size = db.Column(db.Text, unique=True)
     canvas_time = db.Column(db.Integer)
 
     creation_form = db.relationship('CreationForm', back_populates='canvas_size')
@@ -77,7 +74,7 @@ class PaintType(db.Model):
     __tablename__ = "paint_type"
 
     paint_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    type_of_paint = db.Column(db.Text, unique=True)
+    paint_type = db.Column(db.Text, unique=True)
     #not sure if i need unique for the different paint type nanes
     paint_time = db.Column(db.Integer)
     #will i need unique for paint dry time too?
@@ -87,7 +84,7 @@ class PaintType(db.Model):
 
 
     def __repr__(self):
-        return f'<PaintType paint_id ={self.paint_id} type_of_paint={self.type_of_paint}>'
+        return f'<PaintType paint_id ={self.paint_id} paint_type={self.paint_type}>'
 
 ############# NOT USING RIGHT NOW - MAY BE USEFUL LATER #############
 
@@ -118,9 +115,9 @@ class FinalResult(db.Model):
 
     final_result_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     total_dry_time = db.Column(db.Integer)
-    creation_form_id = db.Column(db.ForeignKey('creation_form.creation_form_id')
+    creation_form_id = db.Column(db.ForeignKey('creation_form.creation_form_id'))
 
-# final_result = user's full calculation 
+    # final_result = user's full calculation 
     creation_form = db.relationship('CreationForm', back_populates='final_result')
     # dry_time = db.relationship('DryTime', back_populates='final_result') - NOT USING TABLE ANYMORE
 

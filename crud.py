@@ -1,5 +1,5 @@
 """ CRUD operations. """
-from model import db, FinalResult, DryTime, CreationForm, CanvasSize, Weather, PaintType, connect_to_db
+from model import db, FinalResult, CreationForm, CanvasSize, Weather, PaintType, connect_to_db
 
 # IN order for these tables to be pouplated, you need functions to create them (Crud)
 #Create functions for each  type that creates those paint/canvas/weather rows
@@ -16,10 +16,10 @@ from model import db, FinalResult, DryTime, CreationForm, CanvasSize, Weather, P
 
 #     return bank
 
-def create_paint_types(paint_type, dry_time):
+def create_paint_types(paint_type, paint_time):
     """Creating and returning paint types that user selects """
 
-    paint = Paint(paint_type=paint_type, dry_time=dry_time)
+    paint = PaintType(paint_type=paint_type, paint_time=paint_time)
 
     db.session.add(paint)
     db.session.commit()
@@ -32,17 +32,17 @@ def create_weather_type(weather_type, weather_time):
     weather = Weather(weather_type=weather_type, weather_time=weather_time)
 
     db.session.add(weather)
-    db.commit()
+    db.session.commit()
 
     return weather
 
 def create_canvas_type(canvas_size, canvas_time):
     """Creating and returning all canvas sizes user selects"""
 
-    canvas = Canvas(canvas_size=canvas_size, canvas_time=canvas_time)
+    canvas = CanvasSize(canvas_size=canvas_size, canvas_time=canvas_time)
 
     db.session.add(canvas)
-    db.commit()
+    db.session.commit()
 
     return canvas
 

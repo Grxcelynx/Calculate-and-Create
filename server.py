@@ -1,9 +1,10 @@
 """Server for movie ratings app."""
 
 from flask import (Flask, render_template, request, flash, session,
-                   redirect)
+                   redirect, jsonify)
 from model import connect_to_db
 import crud
+import json
 
 # from jinja2 import StrictUndefined
 
@@ -25,15 +26,18 @@ def homepage():
 
 @app.route('/get_paint_types')
 def get_paint_types():
-""" Returns object of PaintTypes from database"""
+    """ Returns object of PaintTypes from database"""
     paint_types = crud.get_paint_types()
-
-    return jsonify(paint_types)
+    x = []
+    for paint in paint_types:
+        x.append(paint.paint_type)
+    # return json.dumps(paint_types)
+    return jsonify(x)
 
 
 @app.route('/get_weather')
 def get_weather():
-""" Returns object of Weather conditions from database"""
+    """ Returns object of Weather conditions from database"""
     weather_types = crud.get_weather_types()
 
     return jsonify(weather_types)
@@ -41,7 +45,7 @@ def get_weather():
 
 @app.route('/get_canvas_sizes')
 def get_canvas_sizes():
-""" Returns object of Canvas sizes from database"""
+    """ Returns object of Canvas sizes from database"""
     canvas_sizes = crud.get_canvas_sizes()
 
     return jsonify(canvas_sizes)
@@ -62,7 +66,8 @@ def collect_painting_input():
     return jsonify(creation_form)   
 
 
-if __name__ == '__main__':
+if __name__ == '__main__': 
+    connect_to_db(app)
     app.run(host='0.0.0.0', debug=True)
 
 
