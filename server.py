@@ -46,6 +46,7 @@ def get_weather():
     return jsonify(all_weather_info)
 
 
+
 @app.route('/get_canvas_sizes')
 def get_canvas_sizes():
     """ Returns object of Canvas sizes from database"""
@@ -71,6 +72,20 @@ def collect_painting_input():
 
     return jsonify(creation_form)   
 
+@app.route('/creation_form')
+def show_creation_form():
+        """Showing creation_form.html template"""
+        return render_template("creation_form.html")
+
+
+
+# from flask import render_template
+
+# @app.route('/hello')
+# def say_hello():
+#     """Show hello.html template."""
+
+#     return render_template("hello.html")
 
 if __name__ == '__main__': 
     connect_to_db(app)

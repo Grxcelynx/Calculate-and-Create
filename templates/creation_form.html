@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% block title %}Calculate & Create Home{% endblock %}
+
+{% block body %}
+  <h1>Calculate & Create</h1>
+  
+  <h2>Creation Form</h2>
+
+  <form>
+
+    <select>
+        <!-- <label>Painting Name</label> -->
+        <textarea>Painting Name</textarea>
+    </select>
+    
+    
+  </form>
+
+  <form>
+      Weather
+      <select>
+        <!-- <ul>
+            {%for type in weather_type%}
+            <li>
+                <a href="/weather{{Weather.weather_id}}">
+                    {{Weather.weather_type}}
+                    
+                </a>
+            </li>
+            {%endfor%}
+        </ul> -->
+        <option value="weather_type">Hot</option>
+        <option value="weather_type">Humid</option>
+        <option value="weather_type">Cold</option>
+      </select>
+    
+
+</form>
+
+<form>
+    Canvas Size 
+    <select>
+        <!-- <ul>
+            {%for size in canvas_size%}
+            <li>
+                <a href="/canvas{{CavnasSize.canvas_id}}">
+                    {{CanvasSize.canvas_size}}
+                    
+                </a>
+            </li>
+            {%endfor%}
+        </ul> -->
+        <option value="canvas_size">Small: 5x7 - 11x14</option>
+        <option value="canvas_size">Medium: 16x20 - 24x48</option>
+        <option value="canvas_size">Large: 48x48 & Up</option>
+    </select>
+</form>
+  {% endblock %}
+ 
+
+<!-- EXAMPLES TO REFERANCE  -->
+  <!-- <h1>All Movies</h1>
+
+  <ul>
+    {% for movie in movies %}
+      <li>
+        <a href="/movies/{{ movie.movie_id }}">
+          {{ movie.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul> -->
+
+
+  <!-- Dropdown Menus
+  Dropdown menus allow users to select one option from a menu
+  
+  <form>
+    Choose your main programming language:
+  
+    <select name="lang">
+      <option value="python">Python</option>
+      <option value="javascript">JavaScript</option>
+      <option value="ruby">Ruby</option>
+    </select>
+  </form> -->
+
+  <!-- Textareas
+<form>
+  <label>Tell us about yourself:</label>
+  <textarea name="about-me"></textarea>
+</form> -->
+
+<!-- Submit Button
+There are two ways to create a “submit” button:
+
+<form>
+  <input type="submit">
+</form>
+<form>
+  <button type="submit">Log In</button>
+</form> -->
