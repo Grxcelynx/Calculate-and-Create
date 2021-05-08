@@ -24,6 +24,7 @@ paints_in_db = []
 for paints in paint_types:
     paint_type = paints['paint_type']
     paint_time = paints['paint_time']
+    paint_photo = paints['paint_photo']
 
  
     db_paint= crud.create_paint_types(paint_type, paint_time)  #<---this is the crud function for creating the table row of painttype
@@ -57,23 +58,4 @@ for canvas in canvas_sizes:
 
     canvas_in_db.append(db_canvas)  ### maybe irrelevant? Not sure if needed?
 
-    
-#########EXAMPLE IF NEED SEED DATABASE FOR CREATION FORM############
-# # Load movie data from JSON file
-# with open('data/movies.json') as f:
-#     movie_data = json.loads(f.read())
 
-# # Create movies, store them in list so we can use them
-# # to create fake ratings
-# movies_in_db = []
-# for movie in movie_data:
-#     title, overview, poster_path = (movie['title'],
-#                                     movie['overview'],
-#                                     movie['poster_path'])
-#     release_date = datetime.strptime(movie['release_date'], '%Y-%m-%d')
-
-#     db_movie = crud.create_movie(title,
-#                                  overview,
-#                                  release_date,
-#                                  poster_path)
-#     movies_in_db.append(db_movie)

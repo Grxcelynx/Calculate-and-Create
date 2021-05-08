@@ -1,33 +1,39 @@
 [
     {
         "paint_type" : "Acrylic",
-        "paint_time" : "25"
+        "paint_time" : "25",
+        "paint_photo" : 
     },
 
     {
         "paint_type" : "Pure Oil",
-        "paint_time" : "1440"
+        "paint_time" : "1440",
+        "paint_photo" :
 
     },
 
     {
         "paint_type" : "Watercolor",
-        "paint_time" : "12"
+        "paint_time" : "12",
+        "paint_photo" :
     },
 
     {
         "paint_type" : "Pure Gouache",
-        "paint_time" : "20"
+        "paint_time" : "20",
+        "paint_photo" :
     },
 
     {
         "paint_type" : "Oil W/ Paint Thinner",
-        "paint_time" : "720"
+        "paint_time" : "720",
+        "paint_photo" :
     },
 
     {
         "paint_type" : "Gouache W/ Water",
-        "paint_time" : "15"
+        "paint_time" : "15",
+        "paint_photo" :
     }
   
 ]

@@ -23,6 +23,15 @@ def homepage():
 #You also need get methods for your front end to get data from tables to present to the user
 #paint, canvase, and weather GET methods. You will use these GET endpoints on the frontend to 
 # display this info from your databse on the forms (as dropdowns)
+@app.route('/paint_type/<paint_id>')
+def show_all_paints(paint_id):
+    """Shows all info about paint types"""
+
+    paint = crud.get_paint_types()
+
+    return render_template("creation_form.html", paint=paint)
+
+
 
 @app.route('/get_paint_types')
 def get_paint_types():
@@ -79,13 +88,6 @@ def show_creation_form():
 
 
 
-# from flask import render_template
-
-# @app.route('/hello')
-# def say_hello():
-#     """Show hello.html template."""
-
-#     return render_template("hello.html")
 
 if __name__ == '__main__': 
     connect_to_db(app)

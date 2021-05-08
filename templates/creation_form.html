@@ -10,10 +10,10 @@
 
   <form>
 
-    <select>
+    <!-- <select> -->
         <!-- <label>Painting Name</label> -->
         <textarea>Painting Name</textarea>
-    </select>
+    <!-- </select> -->
     
     
   </form>
@@ -59,9 +59,26 @@
 </form>
 
 <form>
-    <select>
+        <h2>Select your Paints</h2>
         
-    </select>
+          <input type="checkbox" name="paint_type" value="Acrylic">
+          <label>Acrylic</label>
+        
+          <input type="checkbox" name="paint_type" value="Pure Oil">
+          <label>Pure Oil</label>
+        
+          <input type="checkbox" name="paint_type" value="Watercolor">
+          <label>Watercolor</label>
+
+          <input type="checkbox" name="paint_type" value="Pure Gouache">
+          <label>Pure Gouache</label>
+        
+          <input type="checkbox" name="paint_type" value="Oil & Paint Thinner">
+          <label>Oil & Paint Thinner</label>
+        
+          <input type="checkbox" name="paint_type" value="Gouache & Water">
+          <label>Gouache & Water</label>
+          
 </form>
   {% endblock %}
  

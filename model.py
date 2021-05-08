@@ -77,6 +77,7 @@ class PaintType(db.Model):
     paint_type = db.Column(db.Text, unique=True)
     #not sure if i need unique for the different paint type nanes
     paint_time = db.Column(db.Integer)
+    paint_photo = db.Column(db.Text, unique=True)
     #will i need unique for paint dry time too?
 
     # paint_type = options of paint the user can select 
