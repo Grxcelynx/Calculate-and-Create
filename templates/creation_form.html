@@ -4,23 +4,31 @@
 {% block title %}Calculate & Create Home{% endblock %}
 
 {% block body %}
+<form> 
   <h1>Calculate & Create</h1>
   
   <h2>Creation Form</h2>
 
-  <form>
+  <!-- <form>
 
-    <!-- <select> -->
-        <!-- <label>Painting Name</label> -->
+    <select>
+        <label>Painting Name</label>
         <textarea>Painting Name</textarea>
-    <!-- </select> -->
+    </select>
     
     
-  </form>
+  </form> -->
 
-  <form>
+  
+
+    
+      <!-- <label>Painting Name</label> -->
+      <textarea>Painting Name</textarea>
+    
+  
+
       Weather
-      <select>
+      <select id=weather_type>
         <!-- <ul>
             {%for type in weather_type%}
             <li>
@@ -31,18 +39,35 @@
             </li>
             {%endfor%}
         </ul> -->
-        <option value="weather_type">Hot</option>
-        <option value="weather_type">Humid</option>
-        <option value="weather_type">Cold</option>
+        <option value="hot">Hot</option>
+        <option value="humid">Humid</option>
+        <option value="cold">Cold</option>
+
       </select>
-    
 
-</form>
+      Canvas Size 
+      <select id=canvas_size>
+          <!-- <ul>
+              {%for size in canvas_size%}
+              <li>
+                  <a href="/canvas{{CavnasSize.canvas_id}}">
+                      {{CanvasSize.canvas_size}}
+                      
+                  </a>
+              </li>
+              {%endfor%}
+          </ul> -->
+          <option value="small">Small: 5x7 - 11x14</option>
+          <option value="medium">Medium: 16x20 - 24x48</option>
+          <option value="large">Large: 48x48 & Up</option>
+      </select>
 
-<form>
-    Canvas Size 
+
+
+<!-- <form> -->
+    <!-- Canvas Size 
     <select>
-        <!-- <ul>
+         <ul>
             {%for size in canvas_size%}
             <li>
                 <a href="/canvas{{CavnasSize.canvas_id}}">
@@ -52,11 +77,11 @@
             </li>
             {%endfor%}
         </ul> -->
-        <option value="canvas_size">Small: 5x7 - 11x14</option>
+        <!-- <option value="canvas_size">Small: 5x7 - 11x14</option>
         <option value="canvas_size">Medium: 16x20 - 24x48</option>
         <option value="canvas_size">Large: 48x48 & Up</option>
-    </select>
-</form>
+    </select> -->
+<!-- </form> --> 
 
 <form>
         <h2>Select your Paints</h2>
@@ -79,6 +104,7 @@
           <input type="checkbox" name="paint_type" value="Gouache & Water">
           <label>Gouache & Water</label>
           
+
 </form>
   {% endblock %}
  
