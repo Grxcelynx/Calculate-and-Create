@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}Calculate & Create Home{% endblock %}
+
+{% block body %}
+<h1> Your total dry time: </h1>
+<li>
+    {{ creation_form.creation_form_id }}
+</li>
+<li>
+    {{ creation_form.painting_name }}
+</li>
+<li>
+    {{ creation_form.canvas_size.canvas_size }}
+
+</li>
+<li>
+    {{ creation_form.weather.weather_type }}
+</li>
+<li>
+    {{ creation_form.paint_type.paint_type }}
+</li>
+
+<li>
+    DRY TIME:
+    {{ creation_form.paint_type.paint_time }} + {{ creation_form.weather.weather_time }} + {{ creation_form.canvas_size.canvas_time }} =
+</li>
+
+<li>
+    In Minutes:
+    {{ creation_form.paint_type.paint_time + creation_form.weather.weather_time + creation_form.canvas_size.canvas_time }}
+</li>
+
+<li>
+    In Hours/Minutes
+    {{ (creation_form.paint_type.paint_time + creation_form.weather.weather_time + creation_form.canvas_size.canvas_time) / 60 }}
+</li>
+
+{% endblock %}

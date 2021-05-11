@@ -18,13 +18,15 @@ class CreationForm(db.Model):
                             db.ForeignKey('weather.weather_id'))
     paint_id = db.Column(db.Integer,
                             db.ForeignKey('paint_type.paint_id'))
+    final_dry_time = db.Column(db.Float)
     
     canvas_size = db.relationship("CanvasSize", back_populates="creation_form")
     weather = db.relationship("Weather", back_populates="creation_form")
     paint_type = db.relationship("PaintType", back_populates="creation_form")
 
-    final_result = db.relationship('FinalResult', back_populates='creation_form')
+    # final_result = db.relationship('FinalResult', back_populates='creation_form')
 
+    # x = canvas_size.canvas_time + paint_type.paint_time + weather.weather_time
 
 
     # creation_form = a list of creation objects 
@@ -109,22 +111,22 @@ class PaintType(db.Model):
 
 
 
-class FinalResult(db.Model):
-    """produces the final result for user"""
+# class FinalResult(db.Model):
+#     """produces the final result for user"""
 
-    __tablename__ = "final_result"
+#     __tablename__ = "final_result"
 
-    final_result_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    total_dry_time = db.Column(db.Integer)
-    creation_form_id = db.Column(db.ForeignKey('creation_form.creation_form_id'))
+#     final_result_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+#     total_dry_time = db.Column(db.Integer)
+#     creation_form_id = db.Column(db.ForeignKey('creation_form.creation_form_id'))
 
-    # final_result = user's full calculation 
-    creation_form = db.relationship('CreationForm', back_populates='final_result')
-    # dry_time = db.relationship('DryTime', back_populates='final_result') - NOT USING TABLE ANYMORE
+#     # final_result = user's full calculation 
+#     creation_form = db.relationship('CreationForm', back_populates='final_result')
+#     # dry_time = db.relationship('DryTime', back_populates='final_result') - NOT USING TABLE ANYMORE
 
 
-def __repr__(self):
-    return f'<FinalResult final_result_id ={self.final_result_id} dry_time_id={self.dry_time_id}>'
+# def __repr__(self):
+#     return f'<FinalResult final_result_id ={self.final_result_id} dry_time_id={self.dry_time_id}>'
 
 def connect_to_db(flask_app, db_uri='postgresql:///calculate_n_create', echo=True):
     flask_app.config['SQLALCHEMY_DATABASE_URI'] = db_uri

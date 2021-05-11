@@ -1,5 +1,5 @@
 """ CRUD operations. """
-from model import db, FinalResult, CreationForm, CanvasSize, Weather, PaintType, connect_to_db
+from model import db, CreationForm, CanvasSize, Weather, PaintType, connect_to_db
 
 # IN order for these tables to be pouplated, you need functions to create them (Crud)
 #Create functions for each  type that creates those paint/canvas/weather rows
@@ -67,7 +67,9 @@ def create_creation_form(painting_name, canvas_id, weather_id, paint_id):
 
     return creation_form
 
-
+def getting_dry_time():
+    
+    """pulling out dry times to add together for final result"""
 
 if __name__ == '__main__':
     from server import app

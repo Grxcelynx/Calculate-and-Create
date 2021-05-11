@@ -4,150 +4,52 @@
 {% block title %}Calculate & Create Home{% endblock %}
 
 {% block body %}
-<form> 
+
+<form action="/creation_post" method="POST"> 
   <h1>Calculate & Create</h1>
   
   <h2>Creation Form</h2>
 
-  <!-- <form>
-
-    <select>
-        <label>Painting Name</label>
-        <textarea>Painting Name</textarea>
-    </select>
-    
-    
-  </form> -->
-
-  
-
-    
-      <!-- <label>Painting Name</label> -->
-      <textarea>Painting Name</textarea>
-    
-  
+      <textarea name="painting_name">Painting Name</textarea>
 
       Weather
-      <select id=weather_type>
-        <!-- <ul>
-            {%for type in weather_type%}
-            <li>
-                <a href="/weather{{Weather.weather_id}}">
-                    {{Weather.weather_type}}
-                    
-                </a>
+      <select name="weather_type">
+        <ul>
+            {% for type in weather_types %}
+            <li>               
+                    <option value="{{type.weather_id}}"> {{type.weather_type}}</option>                                   
             </li>
             {%endfor%}
-        </ul> -->
-        <option value="hot">Hot</option>
-        <option value="humid">Humid</option>
-        <option value="cold">Cold</option>
-
+        </ul>
       </select>
 
-      Canvas Size 
-      <select id=canvas_size>
-          <!-- <ul>
-              {%for size in canvas_size%}
-              <li>
-                  <a href="/canvas{{CavnasSize.canvas_id}}">
-                      {{CanvasSize.canvas_size}}
-                      
-                  </a>
-              </li>
-              {%endfor%}
-          </ul> -->
-          <option value="small">Small: 5x7 - 11x14</option>
-          <option value="medium">Medium: 16x20 - 24x48</option>
-          <option value="large">Large: 48x48 & Up</option>
-      </select>
-
-
-
-<!-- <form> -->
-    <!-- Canvas Size 
-    <select>
-         <ul>
-            {%for size in canvas_size%}
+    Canvas Size
+    <select name="canvas_size">
+          <ul>
+            {% for my_size in canvas_sizes %}
             <li>
-                <a href="/canvas{{CavnasSize.canvas_id}}">
-                    {{CanvasSize.canvas_size}}
-                    
-                </a>
+                  <option value="{{ my_size.canvas_id }}">{{ my_size.canvas_size }}</option>                   
             </li>
-            {%endfor%}
-        </ul> -->
-        <!-- <option value="canvas_size">Small: 5x7 - 11x14</option>
-        <option value="canvas_size">Medium: 16x20 - 24x48</option>
-        <option value="canvas_size">Large: 48x48 & Up</option>
-    </select> -->
-<!-- </form> --> 
+            {% endfor %} 
+        </ul> 
+    </select>
 
-<form>
-        <h2>Select your Paints</h2>
-        
-          <input type="checkbox" name="paint_type" value="Acrylic">
-          <label>Acrylic</label>
-        
-          <input type="checkbox" name="paint_type" value="Pure Oil">
-          <label>Pure Oil</label>
-        
-          <input type="checkbox" name="paint_type" value="Watercolor">
-          <label>Watercolor</label>
-
-          <input type="checkbox" name="paint_type" value="Pure Gouache">
-          <label>Pure Gouache</label>
-        
-          <input type="checkbox" name="paint_type" value="Oil & Paint Thinner">
-          <label>Oil & Paint Thinner</label>
-        
-          <input type="checkbox" name="paint_type" value="Gouache & Water">
-          <label>Gouache & Water</label>
+        <h2>Select your Paint</h2>
+          <ul>
+            {% for paint in paint_types %}
+            <li>
+              <input type="radio" name="paint_type" value={{paint.paint_id}}>
+              <label>{{paint.paint_type}}</label>
+            </li>
+            {% endfor %}
+          </ul>
           
+          <p>
+
+          </p>
+          <button type="submit">Calculate!</button>
 
 </form>
   {% endblock %}
  
 
-<!-- EXAMPLES TO REFERANCE  -->
-  <!-- <h1>All Movies</h1>
-
-  <ul>
-    {% for movie in movies %}
-      <li>
-        <a href="/movies/{{ movie.movie_id }}">
-          {{ movie.title }}
-        </a>
-      </li>
-    {% endfor %}
-  </ul> -->
-
-
-  <!-- Dropdown Menus
-  Dropdown menus allow users to select one option from a menu
-  
-  <form>
-    Choose your main programming language:
-  
-    <select name="lang">
-      <option value="python">Python</option>
-      <option value="javascript">JavaScript</option>
-      <option value="ruby">Ruby</option>
-    </select>
-  </form> -->
-
-  <!-- Textareas
-<form>
-  <label>Tell us about yourself:</label>
-  <textarea name="about-me"></textarea>
-</form> -->
-
-<!-- Submit Button
-There are two ways to create a “submit” button:
-
-<form>
-  <input type="submit">
-</form>
-<form>
-  <button type="submit">Log In</button>
-</form> -->
