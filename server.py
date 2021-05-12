@@ -72,8 +72,13 @@ def render_form():
 
     return render_template("creation_form.html", canvas_sizes=canvas_sizes, paint_types=paint_types, weather_types=weather_types)
 
+@app.route('/creation_form.html')
+def go_to_form():
+        
+    return render_template("homepage.html")
 
-    
+
+
 @app.route('/creation_post', methods=["POST"])
 def collect_painting_input():
     """Gathering info from the creation form for the user to create a dry time"""

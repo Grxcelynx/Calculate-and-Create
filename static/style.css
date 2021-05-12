@@ -1,10 +1,15 @@
 body {
-    background-color: #EFDABD;
+    background-color: #F3E4CE;
   }
 
   h1 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #520000;
+    color: #780214;
+  }
+
+  h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #121954;
   }
 
 .center {
@@ -14,9 +19,13 @@ body {
     
 }
 
-p {
-  color : #0A1E33;
+
+form {
+  color: #780214
 }
+/* select {
+  color : #1A2375;
+} */
 
 li {
   color : #E29728;
