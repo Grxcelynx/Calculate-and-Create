@@ -3,36 +3,31 @@
 
 {% block body %}
 <h1> Your total dry time: </h1>
-<li>
-    {{ creation_form.creation_form_id }}
-</li>
-<li>
-    {{ creation_form.painting_name }}
-</li>
-<li>
-    {{ creation_form.canvas_size.canvas_size }}
 
-</li>
-<li>
-    {{ creation_form.weather.weather_type }}
-</li>
-<li>
-    {{ creation_form.paint_type.paint_type }}
-</li>
+<p>
+    CREATION ID: {{ creation_form.creation_form_id }} -
+    CREATION NAME: {{ creation_form.painting_name }} -
+    WEATHER: {{ creation_form.weather.weather_type }} -
+    PAINT TYPE: {{ creation_form.paint_type.paint_type }} -
+    CANVAS SIZE: {{ creation_form.canvas_size.canvas_size }}
 
-<li>
+</p>
+
+<!-- <p> -->
+    
+<p class="hidden" name=creation_form value={{ creation_form.paint_type.paint_time }} + {{ creation_form.weather.weather_time }} + {{ creation_form.canvas_size.canvas_time }} =
+    >
     DRY TIME:
-    {{ creation_form.paint_type.paint_time }} + {{ creation_form.weather.weather_time }} + {{ creation_form.canvas_size.canvas_time }} =
-</li>
+</p>
 
-<li>
-    In Minutes:
-    {{ creation_form.paint_type.paint_time + creation_form.weather.weather_time + creation_form.canvas_size.canvas_time }}
-</li>
+<p>
+    {{ "%.1f Minutes" | format (creation_form.paint_type.paint_time + creation_form.weather.weather_time + creation_form.canvas_size.canvas_time) }}
+</p>
 
-<li>
-    In Hours/Minutes
-    {{ (creation_form.paint_type.paint_time + creation_form.weather.weather_time + creation_form.canvas_size.canvas_time) / 60 }}
-</li>
+<p>
+    {{ "%.1f Hours"|format((creation_form.paint_type.paint_time + creation_form.weather.weather_time + creation_form.canvas_size.canvas_time) / 60 ) }}
+</p>
+
 
 {% endblock %}
+

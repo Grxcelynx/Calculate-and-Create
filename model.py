@@ -24,6 +24,8 @@ class CreationForm(db.Model):
     weather = db.relationship("Weather", back_populates="creation_form")
     paint_type = db.relationship("PaintType", back_populates="creation_form")
 
+
+
     # final_result = db.relationship('FinalResult', back_populates='creation_form')
 
     # x = canvas_size.canvas_time + paint_type.paint_time + weather.weather_time

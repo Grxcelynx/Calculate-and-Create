@@ -67,9 +67,8 @@ def create_creation_form(painting_name, canvas_id, weather_id, paint_id):
 
     return creation_form
 
-def getting_dry_time():
-    
-    """pulling out dry times to add together for final result"""
+
+
 
 if __name__ == '__main__':
     from server import app
