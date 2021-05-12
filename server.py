@@ -20,19 +20,6 @@ def homepage():
     return render_template('homepage.html')
 
 
-#You also need get methods for your front end to get data from tables to present to the user
-#paint, canvase, and weather GET methods. You will use these GET endpoints on the frontend to 
-# display this info from your databse on the forms (as dropdowns)
-@app.route('/paint_type/<paint_id>')
-def show_all_paints(paint_id):
-    """Shows all info about paint types"""
-
-    paint = crud.get_paint_types()
-
-    return render_template("creation_form.html", paint=paint)
-
-
-
 @app.route('/get_paint_types')
 def get_paint_types():
     """ Returns object of PaintTypes from database"""
@@ -62,7 +49,6 @@ def get_weather():
     return jsonify(all_weather_info)
 
 
-
 @app.route('/get_canvas_sizes')
 def get_canvas_sizes():
     """ Returns object of Canvas sizes from database"""
@@ -88,7 +74,6 @@ def render_form():
 
 
     
-# POst methods gather info from the front end to give eto the datbase
 @app.route('/creation_post', methods=["POST"])
 def collect_painting_input():
     """Gathering info from the creation form for the user to create a dry time"""
@@ -98,8 +83,6 @@ def collect_painting_input():
     weather_type = request.form.get("weather_type")
     paint_type = request.form.get("paint_type")
     
-    
-
     creation_form = crud.create_creation_form(painting_name, canvas_size, weather_type, paint_type)
 
     # return jsonify(creation_form.painting_name)   

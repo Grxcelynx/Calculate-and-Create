@@ -1,10 +1,6 @@
 """ CRUD operations. """
 from model import db, CreationForm, CanvasSize, Weather, PaintType, connect_to_db
 
-# IN order for these tables to be pouplated, you need functions to create them (Crud)
-#Create functions for each  type that creates those paint/canvas/weather rows
-#Read json file - insert to database
-
 
 
 def create_paint_types(paint_type, paint_time):
@@ -37,7 +33,6 @@ def create_canvas_type(canvas_size, canvas_time):
 
     return canvas
 
-#READ functions for paint/canvas/weather
 def get_weather_types():
     """Return all types of weather"""
     return Weather.query.all()
