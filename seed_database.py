@@ -13,8 +13,6 @@ os.system('createdb calculate_n_create')
 model.connect_to_db(server.app)
 model.db.create_all()
 
-### look at example from CS https://github.com/canjelica/churnNburn/blob/master/seed_database.py
-#first func - load bank data from json file 
 
 # Load paint data from JSON file
 with open('./data/paints.json') as p:

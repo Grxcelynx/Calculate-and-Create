@@ -6,11 +6,11 @@ from model import connect_to_db
 import crud
 import json
 
-# from jinja2 import StrictUndefined
+from jinja2 import StrictUndefined
 
 app = Flask(__name__)
 app.secret_key = "dev"
-# app.jinja_env.undefined = StrictUndefined
+app.jinja_env.undefined = StrictUndefined
 
 
 @app.route('/')
@@ -26,10 +26,11 @@ def get_paint_types():
     paint_types = crud.get_paint_types()
     all_paint_info= []
     for paint in paint_types:
-        p = {}
-        p["id"] = paint.paint_id
-        p["type"] = paint.paint_type
-        all_paint_info.append(p)
+        paint_objects = {}
+        paint_objects["id"] = paint.paint_id
+        paint_objects["type"] = paint.paint_type
+
+        all_paint_info.append(paint_objects)
     # return json.dumps(paint_types)
     return jsonify(all_paint_info)
     # return render_template("creation_form.html", paints=all_paint_info)
@@ -41,10 +42,11 @@ def get_weather():
     weather_types = crud.get_weather_types()
     all_weather_info = []
     for weather in weather_types:
-        w = {}
-        w["id"] = weather.weather_id
-        w["type"] = weather.weather_type
-        all_weather_info.append(w)
+        weather_objects = {}
+        weather_objects["id"] = weather.weather_id
+        weather_objects["type"] = weather.weather_type
+
+        all_weather_info.append(weather_objects)
 
     return jsonify(all_weather_info)
 
@@ -55,10 +57,11 @@ def get_canvas_sizes():
     canvas_sizes = crud.get_canvas_sizes()
     all_canvas_info = []
     for canvas in canvas_sizes:
-        c = {}
-        c["id"] = canvas.canvas_id
-        c["size"] = canvas.canvas_size
-        all_canvas_info.append(c)
+        canvas_objects = {}
+        canvas_objects["id"] = canvas.canvas_id
+        canvas_objects["size"] = canvas.canvas_size
+
+        all_canvas_info.append(canvas_objects)
 
     return jsonify(all_canvas_info)
     # return canvas_sizes

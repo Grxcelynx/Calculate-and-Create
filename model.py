@@ -27,7 +27,7 @@ class CreationForm(db.Model):
 
 
 class CanvasSize(db.Model):
-    """All canvas sizes and dry times to add into the final dry time """
+    """All canvas sizes with dry times to add into the final dry time"""
 
     __tablename__ = "canvas_size"
 
@@ -71,47 +71,6 @@ class PaintType(db.Model):
 
     def __repr__(self):
         return f'<PaintType paint_id ={self.paint_id} paint_type={self.paint_type}>'
-
-############# NOT USING RIGHT NOW - MAY BE USEFUL LATER #############
-
-# class DryTime(db.Model):
-#     """takes in all factors from creation form and adds together for final dry time"""
-
-#     __tablename__ = "dry_time"
-
-#     dry_time_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-#     creation_form_id = db.Column(db.Integer,
-#                                   db.ForeignKey('creation_form.creation_form_id')  )
-
-#     # dry_time = populating final dry time for the result table
-
-#     creation_form = db.relationship("CreationForm", back_populates="dry_time")
-
-#     final_result = db.relationship('FinalResult', back_populates='dry_time')
-
-#     def __repr__(self):
-#         return f'<DryTime dry_time_id ={self.dry_time_id} creation_form_id={self.creation_form_id}>'
-
-
-
-# class FinalResult(db.Model):
-#     """produces the final result for user"""
-
-#     __tablename__ = "final_result"
-
-#     final_result_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-#     total_dry_time = db.Column(db.Integer)
-#     creation_form_id = db.Column(db.ForeignKey('creation_form.creation_form_id'))
-
-#     # final_result = user's full calculation 
-#     creation_form = db.relationship('CreationForm', back_populates='final_result')
-#     # dry_time = db.relationship('DryTime', back_populates='final_result') - NOT USING TABLE ANYMORE
-
-
-# def __repr__(self):
-#     return f'<FinalResult final_result_id ={self.final_result_id} dry_time_id={self.dry_time_id}>'
-
-###### IGNORE THE TWO CLASSES ABOVE - MAY BE USEFUL FOR LATER ADD ONS OF WEBSITE#############
 
 
 
