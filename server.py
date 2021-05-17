@@ -5,12 +5,37 @@ from flask import (Flask, render_template, request, flash, session,
 from model import connect_to_db
 import crud
 import json
+import os
+from twilio.rest import Client
 
 from jinja2 import StrictUndefined
 
 app = Flask(__name__)
 app.secret_key = "dev"
 app.jinja_env.undefined = StrictUndefined
+
+account_sid = os.environ['TWILIO_ACCOUNT_SID']
+auth_token = os.environ['TWILIO_AUTH_TOKEN']
+twilio_number = os.environ['TWILIO_PHONE_NUMBER']
+
+client = Client(account_sid, auth_token)
+
+@app.route('/send_sms')
+def send_sms_twilio():
+    msg = request.args.get('msg')
+    phone_number = request.args.get('phone_number')
+
+
+
+    message = client.messages \
+                .create(
+                     body=msg,
+                     from_=twilio_number,
+                     to=phone_number
+                 )
+
+    print(message.sid)
+
 
 
 @app.route('/')
