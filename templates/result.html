@@ -18,16 +18,34 @@
     
 <p class="hidden" name=creation_form value={{ creation_form.paint_type.paint_time }} + {{ creation_form.weather.weather_time }} + {{ creation_form.canvas_size.canvas_time }} =
     >
-    DRY TIME:
 </p>
 
 <p>
+    DRY TIME:
     {{ "%.1f Minutes" | format (creation_form.paint_type.paint_time + creation_form.weather.weather_time + creation_form.canvas_size.canvas_time) }}
 </p>
 
 <p>
     {{ "%.1f Hours"|format((creation_form.paint_type.paint_time + creation_form.weather.weather_time + creation_form.canvas_size.canvas_time) / 60 ) }}
 </p>
+
+<p>
+    <form>
+        
+    Would you like to save your calculation? 
+
+    <label>Full Name</label>
+    <input type="text" name="Full Name">
+    <label>Phone Number</label>
+    <input type="number" name="Phone Number">
+
+    <button type="submit"> 
+        Send me my calculation!
+    </button>
+</form>
+
+</p>
+
 
 
 {% endblock %}
