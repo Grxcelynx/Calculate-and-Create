@@ -22,7 +22,7 @@ paints_in_db = []
 for paints in paint_types:
     paint_type = paints['paint_type']
     paint_time = paints['paint_time']
-    paint_photo = paints['paint_photo']
+    # paint_photo = paints['paint_photo']
 
  
     db_paint= crud.create_paint_types(paint_type, paint_time)  #<---this is the crud function for creating the table row of painttype

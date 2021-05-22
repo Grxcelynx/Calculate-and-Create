@@ -39,7 +39,8 @@
     <label>Phone Number</label>
     <input type="number" name="phone_number">
     <input type="hidden" name="dry_time" value={{ creation_form.paint_type.paint_time }} + {{ creation_form.weather.weather_time }} + {{ creation_form.canvas_size.canvas_time }} >
-    <button type="submit"> 
+
+    <button type="submit"id="sending-sms"> 
         Send me my calculation!
     </button>
 </form>

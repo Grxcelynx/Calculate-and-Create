@@ -6,11 +6,16 @@
 
     {
         "weather_type" : "Hot",
-        "weather_time" : "0"
+        "weather_time" : "-10"
     },
 
     {
         "weather_type" : "Cold",
         "weather_time" : "15"
+    },
+
+    {
+        "weather_type" : "Temperate",
+        "weather_time" : "0"
     }
 ]

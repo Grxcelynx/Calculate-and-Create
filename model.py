@@ -64,7 +64,7 @@ class PaintType(db.Model):
     paint_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     paint_type = db.Column(db.Text, unique=True)
     paint_time = db.Column(db.Integer)
-    paint_photo = db.Column(db.Text, unique=True)
+    # paint_photo = db.Column(db.Text, unique=True)
 
     creation_form = db.relationship('CreationForm', uselist=False, back_populates='paint_type')
 
