@@ -48,6 +48,11 @@ def get_paint_types():
 
     return PaintType.query.all()
 
+def get_creation_form_id(creation_form_id):
+    """Grabbing all information from a specfifc creation form ID 
+    to send the user their dry time info through Twilio SMS API """
+    return query.filter_by(creation_form_id=creation_form_id).first()
+
 
 def create_creation_form(painting_name, canvas_id, weather_id, paint_id):
     """Taking in user's input/selections to return their selections of all given columns """

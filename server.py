@@ -6,7 +6,7 @@ from model import connect_to_db
 import crud
 import json
 import os
-# from twilio.rest import Client
+from twilio.rest import Client
 
 from jinja2 import StrictUndefined
 
@@ -14,27 +14,34 @@ app = Flask(__name__)
 app.secret_key = "dev"
 app.jinja_env.undefined = StrictUndefined
 
-# account_sid = os.environ['TWILIO_ACCOUNT_SID']
-# auth_token = os.environ['TWILIO_AUTH_TOKEN']
-# twilio_number = os.environ['TWILIO_PHONE_NUMBER']
+account_sid = os.environ['TWILIO_ACCOUNT_SID']
+auth_token = os.environ['TWILIO_AUTH_TOKEN']
+twilio_number = os.environ['TWILIO_PHONE_NUMBER']
 
-# client = Client(account_sid, auth_token)
+client = Client(account_sid, auth_token)
 
-# @app.route('/send_sms')
-# def send_sms_twilio():
-#     msg = request.args.get('msg')
-#     phone_number = request.args.get('phone_number')
+@app.route('/send_sms', methods=["POST"])
+def send_sms_twilio():
+    dry_time_min = int(request.form.get("dry_time"))
+    dry_time_hour = dry_time_min / 60
+    # users_creation = crud.get_creation_form_id()
+    # msg = request.args.get('msg')
+    phone_number = request.form.get('phone_number')
+    full_name = request.form.get('full_name')
+
+    msg = f"Hi {full_name}, here is your total dry time for your creation: In Minutes: {dry_time_min} In Hours: {dry_time_hour:.1f} "
 
 
+    message = client.messages \
+                .create(
+                     body=msg,
+                     from_=twilio_number,
+                     to=phone_number
+                 )
 
-#     message = client.messages \
-#                 .create(
-#                      body=msg,
-#                      from_=twilio_number,
-#                      to=phone_number
-#                  )
-
-#     print(message.sid)
+    # print(message.sid)
+    # return message.sid
+    return render_template("sms_sent.html", dry_time_min=dry_time_min, dry_time_hour=dry_time_hour, full_name=full_name, phone_number=phone_number)
 
 
 

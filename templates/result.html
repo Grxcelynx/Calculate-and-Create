@@ -30,15 +30,15 @@
 </p>
 
 <p>
-    <form>
+    <form action="/send_sms" method="POST">
         
     Would you like to save your calculation? 
 
     <label>Full Name</label>
-    <input type="text" name="Full Name">
+    <input type="text" name="full_name">
     <label>Phone Number</label>
-    <input type="number" name="Phone Number">
-
+    <input type="number" name="phone_number">
+    <input type="hidden" name="dry_time" value={{ creation_form.paint_type.paint_time }} + {{ creation_form.weather.weather_time }} + {{ creation_form.canvas_size.canvas_time }} >
     <button type="submit"> 
         Send me my calculation!
     </button>
