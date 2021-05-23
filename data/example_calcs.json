@@ -1,0 +1,43 @@
+[
+    {
+        "Paint Type" : "Acrylic",
+        "Canvas Size" : "Medium: 16x20 - 24x48",
+        "Weather Condition" : "Temperate",
+        "Total Dry Time" : "40 Minutes"
+
+    },
+
+    {
+        "Paint Type" : "Watercolor",
+        "Canvas Size" : "Small: 5x7 - 11x14",
+        "Weather Condition" : "Humid",
+        "Total Dry Time" : "37 Minutes"
+
+    },
+
+    {
+        "Paint Type" : "Oil",
+        "Canvas Size" : "Large: 48x48 & Up",
+        "Weather Condition" : "Temperate",
+        "Total Dry Time" : "24-48 Hours"
+
+    },
+
+    {
+        "Paint Type" : "Gouache",
+        "Canvas Size" : "Medium: 16x20 - 24x48",
+        "Weather Condition" : "Cold",
+        "Total Dry Time" : "50 Minutes"
+
+    },
+
+    {
+        "Paint Type" : "Acrylic",
+        "Canvas Size" : "Medium: 16x20 - 24x48",
+        "Weather Condition" : "Cold",
+        "Total Dry Time" : "55 Minutes"
+
+    }
+
+    
+]

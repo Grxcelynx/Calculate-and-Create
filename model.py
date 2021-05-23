@@ -8,7 +8,7 @@ class CreationForm(db.Model):
     __tablename__ = "creation_form"
 
     creation_form_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    painting_name = db.Column(db.Text, unique=True)
+    painting_name = db.Column(db.Text)
     canvas_id = db.Column(db.Integer,
                         db.ForeignKey('canvas_size.canvas_id'))
     weather_id = db.Column(db.Integer,
