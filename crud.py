@@ -48,6 +48,14 @@ def get_paint_types():
 
     return PaintType.query.all()
 
+
+def get_examples():
+    """Returning all the finished calculation examples for users to view
+    instead of creating their own."""
+
+    return 
+
+
 def get_creation_form_id(creation_form_id):
     """Grabbing all information from a specfifc creation form ID 
     to send the user their dry time info through Twilio SMS API """
