@@ -51,6 +51,23 @@ def homepage():
 
     return render_template('homepage.html')
 
+@app.route('/example')
+def examples():
+    """Grabbing all example calculations to view"""
+    calc_examples = crud.get_examples()
+    all_examples = []
+    for ex in calc_examples:
+        example_obj = {}
+        example_obj['id'] = ex.example_id
+        example_obj['paint'] = ex.paint_used
+        example_obj['canvas'] = ex.canvas_selected
+        example_obj['weather'] = ex.weather_condition
+        example_obj['total'] = ex.total_dry_time
+        
+        all_examples.append(example_obj)
+
+    return jsonify(all_examples)
+
 
 @app.route('/get_paint_types')
 def get_paint_types():

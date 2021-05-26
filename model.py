@@ -78,10 +78,10 @@ class CalcExamples(db.Model):
     __tablename__ = "calc_examples"
     
     example_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    paint_used = db.Column(db.Text, unique=True)
-    canvas_selected = db.Column(db.Text, unique=True)
-    weather_condition = db.Column(db.Text, unique=True)
-    total_dry_time = db.Column(db.Text, unique=True)
+    paint_used = db.Column(db.Text)
+    canvas_selected = db.Column(db.Text)
+    weather_condition = db.Column(db.Text)
+    total_dry_time = db.Column(db.Text)
        
 
 
