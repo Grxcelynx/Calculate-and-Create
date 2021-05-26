@@ -1,41 +1,41 @@
 [
     {
-        "Paint Used" : "Acrylic",
-        "Canvas Selected" : "Medium: 16x20 - 24x48",
-        "Weather Condition" : "Temperate",
-        "Total Dry Time" : "40 Minutes"
+        "paint_used" : "Acrylic",
+        "canvas_selected" : "Medium: 16x20 - 24x48",
+        "weather_condition" : "Temperate",
+        "total_dry_time" : "40 Minutes"
 
     },
 
     {
-        "Paint Used" : "Watercolor",
-        "Canvas Size" : "Small: 5x7 - 11x14",
-        "Weather Condition" : "Humid",
-        "Total Dry Time" : "37 Minutes"
+        "paint_used" : "Watercolor",
+        "canvas_selected" : "Small: 5x7 - 11x14",
+        "weather_condition" : "Humid",
+        "total_dry_time" : "37 Minutes"
 
     },
 
     {
-        "Paint Used" : "Oil",
-        "Canvas Selected" : "Large: 48x48 & Up",
-        "Weather Condition" : "Temperate",
-        "Total Dry Time" : "24-48 Hours"
+        "paint_used" : "Oil",
+        "canvas_selected" : "Large: 48x48 & Up",
+        "weather_condition" : "Temperate",
+        "total_dry_time" : "24-48 Hours"
 
     },
 
     {
-        "Paint Used" : "Gouache",
-        "Canvas Selected" : "Medium: 16x20 - 24x48",
-        "Weather Condition" : "Cold",
-        "Total Dry Time" : "50 Minutes"
+        "paint_used" : "Gouache",
+        "canvas_selected" : "Medium: 16x20 - 24x48",
+        "weather_condition" : "Cold",
+        "total_dry_time" : "50 Minutes"
 
     },
 
     {
-        "Paint Used" : "Acrylic",
-        "Canvas Selected" : "Medium: 16x20 - 24x48",
-        "Weather Condition" : "Cold",
-        "Total Dry Time" : "55 Minutes"
+        "paint_used" : "Acrylic",
+        "canvas_selected" : "Medium: 16x20 - 24x48",
+        "weather_condition" : "Cold",
+        "total_dry_time" : "55 Minutes"
 
     }
 

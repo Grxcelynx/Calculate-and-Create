@@ -72,15 +72,17 @@ class PaintType(db.Model):
     def __repr__(self):
         return f'<PaintType paint_id ={self.paint_id} paint_type={self.paint_type}>'
 
-class CalcExamples(db.model):
+class CalcExamples(db.Model):
     """User can view set calculations if they do not want to go through calculation process"""
 
     __tablename__ = "calc_examples"
-        paint_used = db.Column(db.Text, unique=True)
-       "Paint Used" : "Acrylic",
-        "Canvas Selected" : "Medium: 16x20 - 24x48",
-        "Weather Condition" : "Temperate",
-        "Total Dry Time" : "40 Minutes"
+    
+    example_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    paint_used = db.Column(db.Text, unique=True)
+    canvas_selected = db.Column(db.Text, unique=True)
+    weather_condition = db.Column(db.Text, unique=True)
+    total_dry_time = db.Column(db.Text, unique=True)
+       
 
 
 def connect_to_db(flask_app, db_uri='postgresql:///calculate_n_create', echo=True):
