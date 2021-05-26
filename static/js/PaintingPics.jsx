@@ -1,5 +1,6 @@
-const PaintingData = [
+const PaintingCalcExamplesData = [
   {
-
+    Paint: "Acrylic",
+    Use: ""
   }
 ]
