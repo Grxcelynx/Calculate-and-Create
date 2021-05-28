@@ -51,6 +51,21 @@ def homepage():
 
     return render_template('homepage.html')
 
+
+@app.route("/paint_info.html")
+def grab_all_paint_info():
+	"""Show all info about paint options for users to select to learn more about what they're creating with."""
+
+	return render_template("homepage.html")
+
+
+@app.route("/paint_info")
+def show_all_paint_info():
+	"""Show all info about paint options for users to select to learn more about what they're creating with."""
+
+	return render_template("paint_info.html")
+
+
 @app.route('/example')
 def examples():
     """Grabbing all example calculations to view"""

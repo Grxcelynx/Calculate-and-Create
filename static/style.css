@@ -1,10 +1,13 @@
 body {
     background-color: #F3E4CE;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+
   }
 
   h1 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: #780214;
+    align-self: center;
   }
 
   h2 {
@@ -44,8 +47,27 @@ button {
   color :#780214
 }
 
-/* p.one {
-    border-style: solid;
-    border-color: #E29728;
-  } */
+.grid {
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
+  grid-gap: 20px;
+  align-items: center;
+}
+
+div.info {
+  border-radius: 3px;
+  border: 3px solid black;
+  width: 22em;
+  height: 25em;
+  margin: 2em;
+  padding: 1em;
+  display: inline-block;
+}
+
+
+img {
+  height: 15em;
+  align-items: center;
+}
+
 
