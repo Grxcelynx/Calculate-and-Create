@@ -144,6 +144,11 @@ def go_to_form():
         
     return render_template("homepage.html")
 
+@app.route('/calc_examples')
+def go_to_examples():
+
+    return render_template("calc_examples.html")
+ 
 
 
 @app.route('/creation_post', methods=["POST"])

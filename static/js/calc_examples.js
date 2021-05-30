@@ -1,18 +1,11 @@
 
-// EXAMPLE CODE
-// Submits phone number to DB for text updates
-// $('#phone-submit').on('click', () => {
-//     $.post('/users/phone-update/api', {'phone': $('#phone-num').val()}, (response) => {
-//       $('#text-modal').modal('toggle');
-//       alert(response);
-//     });
-//   });
 
+$.get("/example", (data) => {
+    $('paint_used').text(`${data.paint_used}`);
+    $('canvas_selected').text(`${data.canvas_selected}`);
+    $('weather_condition').text(`${data.weather_condition}`);
+    $('total_dry_time').text(`${data.total_dry_time}`);
 
+    console.log(data)
 
-
-// $('#sending-sms').on('click', () => {
-//   $.post('/send_sms', {'phone_number': $('#phone_number').val()}, (response) => {
-
-//   });
-// });
+});
