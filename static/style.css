@@ -33,9 +33,10 @@ p {
 form {
   color: #780214
 }
-/* select {
-  color : #1A2375;
-} */
+
+select {
+  color : #350150
+}
 
 li {
   color : #E29728;
@@ -45,11 +46,17 @@ li {
 }
 
 a {
-  color :#780214
+  color : #350150
+
 }
 
 button {
-  color :#780214
+  color :black;
+  border: 3px solid #E29728;
+}
+
+textarea {
+  color : #350150
 }
 
 .grid {
