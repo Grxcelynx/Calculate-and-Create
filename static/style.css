@@ -15,6 +15,11 @@ body {
     color: #121954;
   }
 
+  h3 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #E29728;
+  }
+
 .center {
     display: block;
     margin-left: auto;

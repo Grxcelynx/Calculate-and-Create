@@ -1,26 +1,31 @@
-$.get("/example", (data) => {
-    $('#paint_used').text(data[0].paint);
-    $('#canvas_selected').text(data[0].canvas);
-    $('#weather_condition').text(data[0].weather);
-    $('#total_dry_time').text(data[0].total);
+// $.getJSON("/example", function(data) {
 
-    $('#paint_used').text(data[1].paint);
-    $('#canvas_selected').text(data[1].canvas);
-    $('#weather_condition').text(data[1].weather);
-    $('#total_dry_time').text(data[1].total);
+//     var ul = document.createElement('div');
 
-    $('#paint_used').text(data[2].paint);
-    $('#canvas_selected').text(data[2].canvas);
-    $('#weather_condition').text(data[2].weather);
-    $('#total_dry_time').text(data[2].total);
+//     for (var i = 0, len = data.length; 
+//         i < len; i ++) {
+//         var li = document.createElement('li');
+//         var row = data[i]
+//         li.innerText = "Paint Used: " + row['paint'] + " Canvas Selected:   " + row['canvas'] + " Weather Condition:   " + row['weather'] + " Total Dry time:   " +  row['total'];
+//         ul.appendChild(li);
+//         }
+//     var element = document.getElementById("example");
+//         element.appendChild(ul)
 
-    $('#paint_used').text(data[3].paint);
-    $('#canvas_selected').text(data[3].canvas);
-    $('#weather_condition').text(data[3].weather);
-    $('#total_dry_time').text(data[3].total);
+// });
 
-    $('#paint_used').text(data[4].paint);
-    $('#canvas_selected').text(data[4].canvas);
-    $('#weather_condition').text(data[4].weather);
-    $('#total_dry_time').text(data[4].total);
+$.getJSON("/example", function(data) {
+
+    var ul = document.createElement('div');
+
+    for (var i = 0, len = data.length; 
+        i < len; i ++) {
+        var p = document.createElement('p');
+        var row = data[i]
+        p.innerText = "Paint Used: " + row['paint'] + " Canvas Selected:   " + row['canvas'] + " Weather Condition:   " + row['weather'] + " Total Dry time:   " +  row['total'];
+        ul.appendChild(p);
+        }
+    var element = document.getElementById("example");
+        element.appendChild(ul)
+
 });

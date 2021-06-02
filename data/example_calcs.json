@@ -4,7 +4,6 @@
         "canvas_selected" : "Medium: 16x20 - 24x48",
         "weather_condition" : "Temperate",
         "total_dry_time" : "40 Minutes"
-
     },
 
     {
@@ -12,7 +11,6 @@
         "canvas_selected" : "Small: 5x7 - 11x14",
         "weather_condition" : "Humid",
         "total_dry_time" : "37 Minutes"
-
     },
 
     {
@@ -20,7 +18,6 @@
         "canvas_selected" : "Large: 48x48 & Up",
         "weather_condition" : "Temperate",
         "total_dry_time" : "24-48 Hours"
-
     },
 
     {
@@ -28,7 +25,6 @@
         "canvas_selected" : "Medium: 16x20 - 24x48",
         "weather_condition" : "Cold",
         "total_dry_time" : "50 Minutes"
-
     },
 
     {
@@ -36,8 +32,5 @@
         "canvas_selected" : "Medium: 16x20 - 24x48",
         "weather_condition" : "Cold",
         "total_dry_time" : "55 Minutes"
-
-    }
-
-    
+    } 
 ]
