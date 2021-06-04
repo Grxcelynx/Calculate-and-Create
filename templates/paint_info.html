@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head >
+
 	<title>{% block title %}Calculate & Create{% endblock %}</title>
-	<h1>Calculate & Create</h1>
     <link href="/static/style.css" rel="stylesheet">
 
 	<!-- We'll load React dependencies on all pages for this app. -->
@@ -14,14 +14,19 @@
 	
     {% block js %}
     <script src="/static/js/PaintTypeInfo.jsx" type="text/jsx"></script>
+	
 
 	{% endblock %}
 
+	{% extends 'base.html' %}
 
 </head>
 <body>
 	<!-- Include the page's content with this block. -->
     {% block body %}
+	<h4>info title goes here</h4>
+	<p>put info about what the page is here</p>
+
     <div id="paint-info" class="grid"></div>
     {% endblock %}
 </body>

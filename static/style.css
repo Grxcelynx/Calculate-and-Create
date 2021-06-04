@@ -1,10 +1,10 @@
-div {
+/* div {
     width: 600px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom:auto; 
     margin-top: auto;
-}
+} */
 
 body {
     background-color: #F3E4CE;
@@ -37,7 +37,9 @@ body {
 }
 
 p {
-  color: #780214
+  color: #780214;
+  margin-left: auto;
+  margin-right: auto;
 }
 form {
   color: #780214;
@@ -67,6 +69,7 @@ a {
 button {
   color :black;
   border: 3px solid #E29728;
+  
 }
 
 textarea {
@@ -75,25 +78,34 @@ textarea {
 
 .grid {
   display: grid;
-  grid-template-columns: 3fr 3fr 3fr;
-  grid-gap: 20px;
+  grid-template-columns: 3fr 3fr;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-gap: 10px;
   align-items: center;
 }
 
 div.info {
-  border-radius: 3px;
-  border: 3px solid black;
-  width: 22em;
+  border-radius: 1px;
+  /* border: 2px solid #F3E4CE; */
+  border: 2px solid black;
+  /* width: 22em; */
   height: 25em;
   margin: 2em;
   padding: 1em;
   display: inline-block;
+  align-items: center;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom:auto; 
+  margin-top: auto;
 }
 
 
 img {
   height: 15em;
   align-items: center;
+
 }
 
 

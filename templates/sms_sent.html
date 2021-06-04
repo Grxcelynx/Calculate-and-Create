@@ -1,26 +1,22 @@
-<div>
+<div class="alert alert-success" role="alert">
     {% extends 'base.html' %}
     {% block title %}Calculate & Create Home{% endblock %}
-    
+
+
     {% block body %}
 
-    <h1>Calculate & Create</h1>
-    <h3>Your calculation has been sent!</h3>
-
-    <h4>Calculation sent to:</h4>
-        <p>
-            {{ full_name }} 
-        </p>
-
-    <h4>at the number:</h4>
+        <h4 class="alert-heading">{{ full_name }}, your Calculation has been Created!</h4>
+        <h5>Sent to the number:</h5>
         <p>
             {{ phone_number }}
         </p>
-
-    <h4>With a total dry time of:</h4>
+        <hr>
+        <h5>With your total dry time in:</h5>
         <p>
-            {{ dry_time_min }}
-            {{ dry_time_hour }}
+            {{ dry_time_min }} Hours or 
+            {{ dry_time_hour }} Minutes
         </p>
+        <hr>
+        <p class="mb-0">Please note: All calculated dry times may vary on rapid climate changes </p>
     {% endblock %}  
 </div>

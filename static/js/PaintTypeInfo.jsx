@@ -1,27 +1,27 @@
 const paintTypeInfoData = [
   {
-    Paint: "Acrylic",
-    About: "",
+    Paint: "Acrylic Paint",
+    About: "This is info about Acrylic",
     imgURL: "/static/img/acrylic.jpeg",
     paintId: "1"
   },
 
   {
-    Paint: "Oil",
+    Paint: "Oil Paint",
     About: "",
     imgURL: "/static/img/oil.jpeg",
     paintId: "2"
   },
 
   {
-    Paint: "Gouache",
+    Paint: "Gouache Paint",
     About: "",
     imgURL: "/static/img/gouache.jpeg",
     paintId: "3"
   },
 
   {
-    Paint: "Watercolor",
+    Paint: "Watercolor Paint",
     About: "",
     imgURL: "/static/img/watercolor.jpeg",
     paintId: "4"
@@ -40,9 +40,10 @@ const paintTypeInfoData = [
 function PaintTypeInfo(props) {
   return (
     <div className="info">
-      <h2>Paint: {props.Paint}</h2>
+      <h3>{props.Paint} </h3> 
       <img src={props.imgURL}/>
-      <h2>About: {props.About}</h2>
+      <h4>About: </h4>
+      <p>{props.About}</p>
     </div>
   );
 }
