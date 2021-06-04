@@ -1,3 +1,11 @@
+div {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:auto; 
+    margin-top: auto;
+}
+
 body {
     background-color: #F3E4CE;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -13,6 +21,7 @@ body {
   h2 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: #121954;
+
   }
 
   h3 {
@@ -31,15 +40,20 @@ p {
   color: #780214
 }
 form {
-  color: #780214
+  color: #780214;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 select {
-  color : #350150
+  color : #350150;
+  margin-left: auto;
+    margin-right: auto;
 }
 
 li {
   color : #E29728;
+  
   /* background-color: #520000; */
 
 

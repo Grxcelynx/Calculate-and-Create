@@ -1,57 +1,60 @@
 <!-- NOTE TO SELF: not sure if it is pulling canvas/paints/weather from corrct place  -->
-
-{% extends 'base.html' %}
-{% block title %}Calculate & Create Home{% endblock %}
-
-{% block body %}
-
-<form action="/creation_post" method="POST"> 
-
-  <h1>Calculate & Create</h1>
+<div>
+  {% extends 'base.html' %}
+  {% block title %}Calculate & Create Home{% endblock %}
   
-  <h2>Creation Form</h2>
+  {% block body %}
+  
+  <form action="/creation_post" method="POST"> 
+  
+    <h1>Calculate & Create</h1>
+    
+    <h2>Creation Form</h2>
 
-      <textarea name="painting_name">Painting Name</textarea>
-
-      Weather
-      <select name="weather_type">
-        <ul>
-            {% for type in weather_types %}
-            <li>               
-                    <option value="{{type.weather_id}}"> {{type.weather_type}}</option>                                   
-            </li>
-            {%endfor%}
-        </ul>
-      </select>
-
-    Canvas Size
-    <select name="canvas_size">
+  
+        <textarea name="painting_name">Painting Name</textarea>
+  
+        Weather
+        <select name="weather_type">
           <ul>
-            {% for my_size in canvas_sizes %}
-            <li>
-                  <option value="{{ my_size.canvas_id }}">{{ my_size.canvas_size }}</option>                   
-            </li>
-            {% endfor %} 
-        </ul> 
-    </select>
-
-        <h2>Select your Paint</h2>
-          <ul>
-            {% for paint in paint_types %}
-            <li>
-              <input type="radio" name="paint_type" value={{paint.paint_id}}>
-              <label>{{paint.paint_type}}</label>
-            </li>
-            {% endfor %}
+              {% for type in weather_types %}
+              <li>               
+                      <option value="{{type.weather_id}}"> {{type.weather_type}}</option>                                   
+              </li>
+              {%endfor%}
           </ul>
-          
-          <p>
-
-          </p>
-          
-          <button type="submit">Calculate!</button>
-</form>
-
-  {% endblock %}
- 
-
+        </select>
+  
+      Canvas Size
+      <select name="canvas_size">
+            <ul>
+              {% for my_size in canvas_sizes %}
+              <li>
+                    <option value="{{ my_size.canvas_id }}">{{ my_size.canvas_size }}</option>                   
+              </li>
+              {% endfor %} 
+          </ul> 
+      </select>
+  
+          <h4>Select your Paint</h4>
+            <ul>
+              {% for paint in paint_types %}
+              <li>
+                <input type="radio" name="paint_type" value={{paint.paint_id}}>
+                <label>{{paint.paint_type}}</label>
+              </li>
+              {% endfor %}
+            </ul>
+            
+            <p>
+  
+            </p>
+            
+            <button type="submit">Calculate!</button>
+  </form>
+  
+    {% endblock %}
+   
+  
+  
+</div>

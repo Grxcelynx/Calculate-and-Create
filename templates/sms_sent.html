@@ -1,14 +1,26 @@
-{% extends 'base.html' %}
-{% block title %}Calculate & Create Home{% endblock %}
+<div>
+    {% extends 'base.html' %}
+    {% block title %}Calculate & Create Home{% endblock %}
+    
+    {% block body %}
 
-{% block body %}
+    <h1>Calculate & Create</h1>
+    <h3>Your calculation has been sent!</h3>
 
-<p>
-    Calculation sent to:
-    {{ full_name }}
-    {{ phone_number }} 
-    {{ dry_time_min }}
-    {{ dry_time_hour }}
-</p>
+    <h4>Calculation sent to:</h4>
+        <p>
+            {{ full_name }} 
+        </p>
 
-{% endblock %}
+    <h4>at the number:</h4>
+        <p>
+            {{ phone_number }}
+        </p>
+
+    <h4>With a total dry time of:</h4>
+        <p>
+            {{ dry_time_min }}
+            {{ dry_time_hour }}
+        </p>
+    {% endblock %}  
+</div>

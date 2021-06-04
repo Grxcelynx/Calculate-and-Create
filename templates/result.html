@@ -1,53 +1,61 @@
-{% extends 'base.html' %}
-{% block title %}Calculate & Create Home{% endblock %}
-
-{% block body %}
-<h1>Calculate & Create</h1>
-<h2> Your total dry time: </h2>
-
-<p>
-    CREATION ID: {{ creation_form.creation_form_id }} -
-    CREATION NAME: {{ creation_form.painting_name }} -
-    WEATHER: {{ creation_form.weather.weather_type }} -
-    PAINT TYPE: {{ creation_form.paint_type.paint_type }} -
-    CANVAS SIZE: {{ creation_form.canvas_size.canvas_size }}
-
-</p>
-
-<!-- <p> -->
+<div>
+    {% extends 'base.html' %}
+    {% block title %}Calculate & Create Home{% endblock %}
     
-<p class="hidden" name=creation_form value={{ creation_form.paint_type.paint_time }} + {{ creation_form.weather.weather_time }} + {{ creation_form.canvas_size.canvas_time }} =
-    >
+    {% block body %}
+    <h1>Calculate & Create</h1>
+    <h2> Your total dry time: </h2>
+    
+    <p class="hidden" name=creation_form value={{ creation_form.creation_form_id }}>
 </p>
-
-<p>
-    DRY TIME:
-    {{ "%.1f Minutes" | format (creation_form.paint_type.paint_time + creation_form.weather.weather_time + creation_form.canvas_size.canvas_time) }}
-</p>
-
-<p>
-    {{ "%.1f Hours"|format((creation_form.paint_type.paint_time + creation_form.weather.weather_time + creation_form.canvas_size.canvas_time) / 60 ) }}
-</p>
-
-<p>
-    <form action="/send_sms" method="POST">
+    <h4>CREATION NAME: {{ creation_form.painting_name }}</h4>
+    <h4>WEATHER: {{ creation_form.weather.weather_type }}</h4>
+    <h4>PAINT TYPE: {{ creation_form.paint_type.paint_type }}</h4>
+    <h4>CANVAS SIZE: {{ creation_form.canvas_size.canvas_size }}</h4>
+    <p>
+        <!-- CREATION ID: {{ creation_form.creation_form_id }} - -->
+        CREATION NAME: {{ creation_form.painting_name }} -
+        WEATHER: {{ creation_form.weather.weather_type }} -
+        PAINT TYPE: {{ creation_form.paint_type.paint_type }} -
+        CANVAS SIZE: {{ creation_form.canvas_size.canvas_size }}
+    
+    </p>
+    
+    <!-- <p> -->
         
-    Would you like to save your calculation? 
-
-    <label>Full Name</label>
-    <input type="text" name="full_name">
-    <label>Phone Number</label>
-    <input type="number" name="phone_number">
-    <input type="hidden" name="dry_time" value={{ creation_form.paint_type.paint_time }} + {{ creation_form.weather.weather_time }} + {{ creation_form.canvas_size.canvas_time }} >
-
-    <button type="submit"id="sending-sms"> 
-        Send me my calculation!
-    </button>
-</form>
-
-</p>
-
-
-
-{% endblock %}
-
+    <p class="hidden" name=creation_form value={{ creation_form.paint_type.paint_time }} + {{ creation_form.weather.weather_time }} + {{ creation_form.canvas_size.canvas_time }} =
+        >
+    </p>
+    <p>DRY TIME:</p>
+    <p>
+        {{ "%.1f Minutes" | format (creation_form.paint_type.paint_time + creation_form.weather.weather_time + creation_form.canvas_size.canvas_time) }}
+    </p>
+    
+    <p>
+        {{ "%.1f Hours"|format((creation_form.paint_type.paint_time + creation_form.weather.weather_time + creation_form.canvas_size.canvas_time) / 60 ) }}
+    </p>
+    
+    <p>
+        <form action="/send_sms" method="POST">
+            
+        Would you like to save your calculation? 
+    
+        <label>Full Name</label>
+        <input type="text" name="full_name">
+        <label>Phone Number</label>
+        <input type="number" name="phone_number">
+        <input type="hidden" name="dry_time" value={{ creation_form.paint_type.paint_time }} + {{ creation_form.weather.weather_time }} + {{ creation_form.canvas_size.canvas_time }} >
+    
+        <button type="submit"id="sending-sms"> 
+            Send me my calculation!
+        </button>
+    </form>
+    
+    </p>
+    
+    
+    
+    {% endblock %}
+    
+    
+</div>
