@@ -1,10 +1,4 @@
-/* div {
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom:auto; 
-    margin-top: auto;
-} */
+
 
 body {
     background-color: #F3E4CE;
@@ -75,6 +69,25 @@ button {
 textarea {
   color : #350150
 }
+div.homepage {
+
+  /* width: 22em; */
+  /* height: 25em; */
+  margin: center;
+  padding: 1em;
+  display: inline-block;
+  align-items: center;
+  /* background-image: ; */
+  text-align: center;
+  padding-left: 2em;
+  padding-right: 2em;
+  background-color: white;
+}
+
+p.home {
+  padding-right: 5em;
+  padding-left: 5em;
+}
 
 .grid {
   display: grid;
@@ -105,6 +118,8 @@ div.info {
 img {
   height: 15em;
   align-items: center;
+  background-color: #F3E4CE;
+  background: transparent;
 
 }
 

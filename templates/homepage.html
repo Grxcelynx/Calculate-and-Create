@@ -1,35 +1,53 @@
-<div> 
-  {% extends 'base.html' %}
+
+<div class="homepage"> 
+
   <link href="/static/style.css" rel="stylesheet">
-  
+  {% extends 'base.html' %}
+
   {% block title %}Calculate & Create Home{% endblock %}
   
     {% block body %}
-     <h3>Time to Calculate & Create your dry time!</h3> 
+      <h3>Time to Calculate & Create your dry time!</h3> 
+      <img src="static/img/pluto-artist-workspace.jpeg" class="homepage">
+
+      <hr>
+        
+      <!-- FOR TESTING PURPOSES  -->
+      <!-- <li><a href="/get_paint_types">View all paint types</a></li> -->
+      <!-- <li><a href="/get_weather">View all weather conditions</a></li> -->
+      <!-- <li><a href="/get_canvas_sizes">View all canvas sizes</a></li> -->
+      <!-- <li><a href="/render_form">Calculate My Creation!</a></li> -->
+      <!-- FOR TESTING PURPOSES^^^^ -->
+      <p class="home">
+        <p>
+          <p>
+            Create a more organized timeline by calculating the dry time for your creation. 
+
+          </p>
+          <button>
+            <a href="/render_form">Calculate My Creation!</a>
+          </button>
+        </p>
       
-     <!-- FOR TESTING PURPOSES  -->
-     <!-- <li><a href="/get_paint_types">View all paint types</a></li> -->
-     <!-- <li><a href="/get_weather">View all weather conditions</a></li> -->
-     <!-- <li><a href="/get_canvas_sizes">View all canvas sizes</a></li> -->
-     <!-- <li><a href="/render_form">Calculate My Creation!</a></li> -->
-     <!-- FOR TESTING PURPOSES^^^^ -->
-    <p>
-      <button>
-        <a href="/render_form">Calculate My Creation!</a>
-      </button>
-    </p>
-   
-    <p>
-      <button>
-        <a href="/paint_info">Learn more about the paint you're selecting!</a>
-      </button>
-    </p>
-     
-    <p>
-      <button>
-        <a href="/calc_examples">Check out some finish calculations</a> 
-       </button>
-    </p>
+        <p>
+          <p>
+            Want to know more about the paint you're using and how it operates? 
+            We've accumilated information on all the paint types provided for your calculation.
+          </p>
+          <button>
+            <a href="/paint_info">Learn more </a>
+          </button>
+        </p>
+        
+        <p>
+          <p>
+            Don't have time to calculate and just want to create?
+          </p>
+          <button>
+            <a href="/calc_examples">See finished calculations</a> 
+          </button>
+        </p>
+      </p>
       
     
   {% endblock %}
