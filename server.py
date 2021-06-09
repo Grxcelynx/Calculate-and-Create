@@ -43,9 +43,13 @@ def send_sms_twilio():
     # return message.sid
     return render_template("sms_sent.html", dry_time_min=dry_time_min, dry_time_hour=dry_time_hour, full_name=full_name, phone_number=phone_number)
 
-
-
 @app.route('/')
+def enterpage():
+    """View opening page"""
+    return render_template('open.html')
+
+
+@app.route('/homepage')
 def homepage():
     """View homepage."""
 

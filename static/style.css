@@ -34,6 +34,8 @@ p {
   color: #780214;
   margin-left: auto;
   margin-right: auto;
+  /* padding-left: 8em;
+  padding-right: 8em; */
 }
 form {
   color: #780214;
@@ -61,32 +63,54 @@ a {
 }
 
 button {
-  color :black;
-  border: 3px solid #6621C0;
-  
+  background-color: #F3E4CE;
 }
 
 textarea {
   color : #350150
 }
-div.homepage {
-
-  /* width: 22em; */
-  /* height: 25em; */
+div.rainbow-button {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 7em;
+  align-items: center;
   margin: center;
-  padding: 1em;
+  padding-right: 1em;
+  padding-left: 1em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  text-align: center;
+  background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.rainbow-letters {
+  font-size: 1.5em;
+  background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+div.homepage {
+  margin: center;
+  padding: 2em;
   display: inline-block;
   align-items: center;
-  /* background-image: ; */
   text-align: center;
   padding-left: 2em;
   padding-right: 2em;
   background-color: white;
 }
+ img.homepage {
+   padding-top: 1em;
+   height: 550px;
+   width: 550px;
+ }
+
 
 p.home {
-  padding-right: 5em;
-  padding-left: 5em;
+  padding-right: 20em;
+  padding-left: 20em;
 }
 
 .grid {
