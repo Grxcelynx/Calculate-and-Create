@@ -20,46 +20,38 @@
       <!-- <li><a href="/get_canvas_sizes">View all canvas sizes</a></li> -->
       <!-- <li><a href="/render_form">Calculate My Creation!</a></li> -->
       <!-- FOR TESTING PURPOSES^^^^ -->
-      <body class="homebody">
-        <!-- <img src="static/img/pluto-artist-workspace.jpeg" class="homepage"> -->
-        <p class="homepara">
-          <p class="homepara">
-            <p class="homepara">
-              <span>
-                Create a more organized timeline for your creation time. 
-              </span>
-            </p>
-            <button>
-              <a href="/render_form">Calculate My Creation!</a>
-            </button>
-          </p>
+      
+      <div class="d-flex position-relative">
+        <img src="/static/img/pluto-artist-workspace.jpeg" class="creation-form-img" alt="...">
+        <!-- Illustration by <a href="https://icons8.com/illustrations/author/5dbbfa9e01d0360016457560">Sara Maese</a> from <a href="https://icons8.com/illustrations">Ouch!</a> -->
+        <div>
+          <h5 class="create-homepage">Create a more organized timeline for your creation.</h5>
+          <p>This is some placeholder content for the custom component. It is intended to mimic what some real-world content would look like, and we're using it here to give the component a bit of body and size.</p>
+          <a href="/render_form" class="home-button">Create</a>
+        </div>
+      </div>
+
+      <div class="d-flex position-relative">
+        <img src="/static/img/kingdom-1232.png" class="paint-info-img" alt="...">
+        <!-- Illustration by <a href="https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6">Icons 8</a> from <a href="https://icons8.com/illustrations">Ouch!</a> -->
+        <div>
+          <h5 class="info-homepage">Want to know more about the paint you're using and how it operates?</h5>
+          <p>We've gathered information on all the paint types provided for your calculation.</p>
+          <a href="/render_form" class="home-button">Learn More</a>
+        </div>
+      </div>
         
-          <p class="homepara">
-            <p class="homepara"> 
-              <span>
-              Want to know more about the paint you're using and how it operates? 
-              We've gathered information on all the paint types provided for your calculation.
-            </span>
-            </p>
-            <button>
-              <a href="/paint_info">Learn more </a>
-            </button>
-          </p>
-          
-          <p class="homepara">
-            <p class="homepara">
-              <span>
-                Don't have time to calculate and just want to create? We have accumilated example calculations of our most popular dry times.
-              </span>
-            </p>
-            <button>
-              <a href="/calc_examples">See examples</a> 
-            </button>
-      
-          </p>
-        </p>
-      </body>
-      
+      <div class="d-flex position-relative">
+
+          <img src="/static/img/pixeltrue-time-management-1.png" class="example-img" alt="...">
+
+          <div>
+            <h5 class="example-homepage">Don't have time to calculate and just want to create?</h5>
+            <p>We have accumilated example calculations of our most popular dry times.</p>
+            <a href="/calc_examples" class="home-button">Examples</a>
+          </div>
+      </div>
     
   {% endblock %}
 </div>
+

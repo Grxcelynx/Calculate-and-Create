@@ -79,17 +79,13 @@ div.rainbow-button {
   padding-top: 3em;
   padding-bottom: 3em;
   text-align: center;
-  /* background: linear-gradient(to right, #780214, red, #E29728, #E6BF0F,#469E03, blue, #121954 ); */
-  /* background: linear-gradient(to right, red, #dbe60f,blue ); */
   background: linear-gradient(to right,white, white,grey, grey,black, #0a1b60, #520000,#e2bd28, yellow);
-
-
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .rainbow-letters {
-  font-size: 1.5em;
+  font-size: 2em;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: bold;
   /* background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722); */
@@ -102,40 +98,23 @@ div.container-fluid{
   background-color: #F3E4CE;
 }
 
-div.homepage {
-  position: relative;
-  text-align: center;
-  width: auto;
-  height: auto;
-  padding: 2em;
-  padding-bottom: 25em;
 
- 
+img.creation-form-img {
+  width: 270px;
+}
+
+img.paint-info-img {
+  height: 250px;
+  width: 275px;
+}
+
+img.example-img {
+  width: 280px;
 
 }
 
-body.homebody {
-  margin: center;
-  border: 10em;
-  align-items: center;
-  text-align: center;
-  background-image: url(/static/img/pluto-artist-workspace.jpeg);
-  
-}
-
-p.homepara {
-  font-size: 20px;
-  padding-left: 15em;
-  padding-right: 15em;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  /* background-color: #F3E4CE(0,0,0,0.4); */
-  /* background-color: rgba(240, 233, 211, 0.4); */
-
-}
-
-p.homepara span {
-  background-color: rgba(240, 233, 211, 0.9);
-
+a.home-button {
+  font-size: 1.3em;
 }
 
 .grid {
