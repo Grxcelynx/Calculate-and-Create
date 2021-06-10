@@ -79,7 +79,7 @@ div.rainbow-button {
   padding-top: 3em;
   padding-bottom: 3em;
   text-align: center;
-  background: linear-gradient(to right,white, white,grey, grey,black, #0a1b60, #520000,#e2bd28, yellow);
+  background: linear-gradient(to right,white,white, grey,rgb(1, 1, 18), #091c67, #600101,#eec728, yellow);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
