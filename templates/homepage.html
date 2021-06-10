@@ -5,49 +5,60 @@
   {% extends 'base.html' %}
 
   {% block title %}Calculate & Create Home{% endblock %}
+
   
-    {% block body %}
-      <img src="static/img/pluto-artist-workspace.jpeg" class="homepage">
+  {% block body %}
       <!-- Illustration by <a href="https://icons8.com/illustrations/author/5dbbfa9e01d0360016457560">Sara Maese</a> from <a href="https://icons8.com/illustrations">Ouch!</a> -->
 
       <hr>
-        
+    
+
+    
       <!-- FOR TESTING PURPOSES  -->
       <!-- <li><a href="/get_paint_types">View all paint types</a></li> -->
       <!-- <li><a href="/get_weather">View all weather conditions</a></li> -->
       <!-- <li><a href="/get_canvas_sizes">View all canvas sizes</a></li> -->
       <!-- <li><a href="/render_form">Calculate My Creation!</a></li> -->
       <!-- FOR TESTING PURPOSES^^^^ -->
-      <p class="home">
-        <p class="home">
-          <p class="home">
-            Create a more organized timeline for your creation time. 
-
+      <body class="homebody">
+        <!-- <img src="static/img/pluto-artist-workspace.jpeg" class="homepage"> -->
+        <p class="homepara">
+          <p class="homepara">
+            <p class="homepara">
+              <span>
+                Create a more organized timeline for your creation time. 
+              </span>
+            </p>
+            <button>
+              <a href="/render_form">Calculate My Creation!</a>
+            </button>
           </p>
-          <button>
-            <a href="/render_form">Calculate My Creation!</a>
-          </button>
-        </p>
-      
-        <p class="home">
-          <p class="home">
-            Want to know more about the paint you're using and how it operates? 
-            We've gathered information on all the paint types provided for your calculation.
-          </p>
-          <button>
-            <a href="/paint_info">Learn more </a>
-          </button>
-        </p>
         
-        <p class="home">
-          <p class="home">
-            Don't have time to calculate and just want to create? We have accumilated example calculations of our most popular dry times.
+          <p class="homepara">
+            <p class="homepara"> 
+              <span>
+              Want to know more about the paint you're using and how it operates? 
+              We've gathered information on all the paint types provided for your calculation.
+            </span>
+            </p>
+            <button>
+              <a href="/paint_info">Learn more </a>
+            </button>
           </p>
-          <button>
-            <a href="/calc_examples">See examples</a> 
-          </button>
+          
+          <p class="homepara">
+            <p class="homepara">
+              <span>
+                Don't have time to calculate and just want to create? We have accumilated example calculations of our most popular dry times.
+              </span>
+            </p>
+            <button>
+              <a href="/calc_examples">See examples</a> 
+            </button>
+      
+          </p>
         </p>
-      </p>
+      </body>
       
     
   {% endblock %}
