@@ -1,57 +1,72 @@
 <!-- NOTE TO SELF: not sure if it is pulling canvas/paints/weather from corrct place  -->
-<div>
+<div class="creation-form">
   {% extends 'base.html' %}
   {% block title %}Calculate & Create Home{% endblock %}
   
   {% block body %}
   
-  <form action="/creation_post" method="POST"> 
-  
-    
-    <h2>Creation Form</h2>
-    <p>
-      
-    </p>
-    <hr>
-  
-        <textarea name="painting_name">Painting Name</textarea>
-        Weather
-        <select name="weather_type">
-          <ul>
-              {% for type in weather_types %}
-              <li>               
-                      <option value="{{type.weather_id}}"> {{type.weather_type}}</option>                                   
+  <form class="creation-form" action="/creation_post" method="POST"> 
+<!--   
+        <div class="painting-name">
+          <span class="input-group-text" id="addon-wrapping"></span>
+        </div> -->
+        <p class='painting-name'>span</p>
+
+        <div class="input-group flex-nowrap">
+          <span name="painting_name" class="input-group-text" id="addon-wrapping">Enter Paiting Name:</span>
+          <input name="painting_name" type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+
+
+        <div class="paint-type">
+          <select name="paint_type" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            <option class="p-name" selected>Select your paint</option>
+            <ul>
+              {% for paint in paint_types %}
+              <li>
+                <option value={{paint.paint_id}}> {{paint.paint_type}}</option>
+                <label>{{paint.paint_type}}</label>
               </li>
-              {%endfor%}
-          </ul>
-        </select>
-  
-      Canvas Size
-      <select name="canvas_size">
+              {% endfor %}
+            </ul>
+          </select>          
+        </div>
+
+        <div class="canvas-type">
+          <select name="canvas_size" class="form-select form-selec-lg mb-3" aria-label=".form-select-lg example">
+            <option selected>Canvas Size</option>
             <ul>
               {% for my_size in canvas_sizes %}
               <li>
                     <option value="{{ my_size.canvas_id }}">{{ my_size.canvas_size }}</option>                   
               </li>
               {% endfor %} 
-          </ul> 
-      </select>
-  
-          <h4>Select your Paint</h4>
+            </ul> 
+          </select>
+        </div>    
+
+            
+        <div class="weather-type">
+          <select name="weather_type" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            <option selected>Weather Condition</option>
             <ul>
-              {% for paint in paint_types %}
-              <li>
-                <input type="radio" name="paint_type" value={{paint.paint_id}}>
-                <label>{{paint.paint_type}}</label>
+              {% for type in weather_types %}
+              <li>               
+                      <option value="{{type.weather_id}}"> {{type.weather_type}}</option>                                   
               </li>
-              {% endfor %}
+              {%endfor%}
             </ul>
+          </select>
+        </div>
+
+        <div>
+          <p>
+            <button class="c-form" type="submit">Calculate!</button>
+
+          </p>
+        </div>
+
             
-            <p>
-  
-            </p>
-            
-            <button type="submit">Calculate!</button>
   </form>
   
     {% endblock %}
@@ -59,3 +74,4 @@
   
   
 </div>
+

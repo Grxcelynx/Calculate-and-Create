@@ -62,8 +62,13 @@ a {
 
 }
 
-button {
-  background-color: #F3E4CE;
+button.c-form {
+  /* background-color: #F3E4CE; */
+  background: linear-gradient(to left,white,#F3E4CE,white);
+  border-color: white;
+  font-size: 2em;
+  color: black;
+
 }
 
 textarea {
@@ -117,6 +122,61 @@ a.home-button {
   font-size: 1.3em;
 }
 
+div.creation-form {
+  align-items: center;
+  text-align: center;
+}
+
+span.input-group-text{
+  background: linear-gradient(to right,white,white,#F3E4CE,#F3E4CE,white);
+  width: 15em;
+  font-size: 1.5em;
+}
+
+
+p.painting-name{
+  background: linear-gradient(to right, #0625a2, #830505,#eec10a);
+  -webkit-text-fill-color: transparent;
+
+}
+
+input.form-control{
+  /* text-align: center; */
+  background: linear-gradient(to left, #052dce, #b30606,#f5c607,#3359f2, #e83939,#eedb0a,#5979fa, #df0cae,#fef37c,#052dce, #b30606,#f5c607,#3359f2, #e83939,#eedb0a,#5979fa, #df0cae,#fef37c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2em;
+}
+
+option.p-name{
+  align-items: center;
+}
+
+div.paint-type {
+  font-size: 1.5em;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to left,white, #F3E4CE,white,white, white,#F3E4CE,white);
+  border-color: #F3E4CE;
+  padding-bottom: 4em;
+  padding-top: 1em;
+}
+
+div.canvas-type {
+  font-size: 1.5em;
+  text-align: center;
+  align-items: center;
+  background: linear-gradient(to left,white, #F3E4CE,white,white, white,#F3E4CE,white);
+  padding-bottom: 4em;
+}
+
+div.weather-type {
+  font-size: 1.5em;
+  text-align: center;
+  align-items: center;
+  background: linear-gradient(to left,white, #F3E4CE,white,white, white,#F3E4CE,white);
+  padding-bottom: 4em;
+}
 .grid {
   display: grid;
   grid-template-columns: 3fr 3fr;
@@ -151,4 +211,12 @@ img {
 
 }
 
+h4.alert-heading{
+  text-align: center;
+  background-color: #F3E4CE;
+  color: black;
+  align-items: center;
+  padding-left: 10em;
+  padding-right: 10em;
+}
 

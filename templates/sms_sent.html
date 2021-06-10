@@ -1,4 +1,4 @@
-<div class="alert alert-success" role="alert">
+<div class="alert alert-success" role="alert" style="background-color:#F3E4CE">
     {% extends 'base.html' %}
     {% block title %}Calculate & Create Home{% endblock %}
 
@@ -6,9 +6,9 @@
     {% block body %}
 
         <h4 class="alert-heading">{{ full_name }}, your Calculation has been Created!</h4>
-        <h5>Sent to the number:</h5>
+        <h5>Sent to:</h5>
         <p>
-            {{ phone_number }}
+           {{ full_name }} @ {{ phone_number }}
         </p>
         <hr>
         <h5>With your total dry time in:</h5>
