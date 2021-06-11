@@ -23,6 +23,17 @@ body {
     color: #E29728;
   }
 
+  h4 {
+    color: #0625a2;
+  }
+
+  h5 {
+    color: #E29728;
+  }
+
+  h6 {
+    color:#E29728
+  }
 .center {
     display: block;
     margin-left: auto;
@@ -31,7 +42,7 @@ body {
 }
 
 p {
-  color: #780214;
+  color: #850114;
   margin-left: auto;
   margin-right: auto;
   /* padding-left: 8em;
@@ -211,12 +222,10 @@ img {
 
 }
 
-h4.alert-heading{
+div.alert {
   text-align: center;
-  background-color: #F3E4CE;
-  color: black;
   align-items: center;
+  background-color: #0625a2;
   padding-left: 10em;
-  padding-right: 10em;
 }
 

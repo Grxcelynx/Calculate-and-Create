@@ -1,22 +1,27 @@
-<div class="alert alert-success" role="alert" style="background-color:#F3E4CE">
+<div class="card text-center">
     {% extends 'base.html' %}
-    {% block title %}Calculate & Create Home{% endblock %}
-
-
     {% block body %}
 
-        <h4 class="alert-heading">{{ full_name }}, your Calculation has been Created!</h4>
-        <h5>Sent to:</h5>
-        <p>
-           {{ full_name }} @ {{ phone_number }}
-        </p>
-        <hr>
-        <h5>With your total dry time in:</h5>
-        <p>
-            {{ dry_time_min }} Hours or 
-            {{ dry_time_hour }} Minutes
-        </p>
-        <hr>
-        <p class="mb-0">Please note: All calculated dry times may vary on rapid climate changes </p>
+    <div class="card-header">
+        {{ fname }} {{ lname }}, your Calculation has been Created!   
+     </div>
+    <div class="card-body">
+      <h5 class="card-title">{{ painting_name }}</h5>
+      <h6 class="card-title">Sent to:</h6>
+      <p class="card-text">
+         {{ phone_number }}
+      </p>
+      <h6 class="card-title">With your total dry time in:</h6>
+      <p class="card-text">
+          {{ dry_time_min }} Minutes or 
+          {{ dry_time_hour }} Hours
+      </p>
+      <p class="card-text"></p>
+      <a href="/render_form" class="btn btn-outline-danger">Create Another Calculation</a>
+    </div>
+    <div class="card-footer text-muted">
+        *Please note: All calculated dry times may vary on rapid climate changes
+    </div>
     {% endblock %}  
+
 </div>

@@ -6,7 +6,7 @@
     
 
         <div class="alert alert-success" role="alert" style="background-color:#F3E4CE">
-            <h4 class="alert-heading">Calculation Created!!</h4>
+            <h4 class="alert-heading" style="color:black">Calculation Created!!</h4>
             <p class="hidden" name=creation_form value={{ creation_form.paint_type.paint_time }} + {{ creation_form.weather.weather_time }} + {{ creation_form.canvas_size.canvas_time }} => </p>
             <h5>Here are your final dry times calculated into hours and minutes for {{ creation_form.painting_name }}.</h5>
             <p>
@@ -28,8 +28,8 @@
 
             <div class="input-group">
                 <span class="input-group-text">First and last name</span>
-                <input type="text" aria-label="First name" class="form-control" name="full_name">
-                <input type="text" aria-label="Last name" class="form-control" name="full_name">
+                <input type="text" aria-label="First name" class="form-control" name="fname">
+                <input type="text" aria-label="Last name" class="form-control" name="lname">
             </div>
 
             <div class="input-group">
@@ -42,6 +42,7 @@
             </button>
 
         </form>
+
 
     {% endblock %}
     

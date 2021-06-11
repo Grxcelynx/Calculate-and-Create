@@ -24,12 +24,12 @@ client = Client(account_sid, auth_token)
 def send_sms_twilio():
     dry_time_min = int(request.form.get("dry_time"))
     dry_time_hour = dry_time_min / 60
-    # users_creation = crud.get_creation_form_id()
-    # msg = request.args.get('msg')
+    painting_name = request.form.get("painting_name")
     phone_number = request.form.get('phone_number')
-    full_name = request.form.get('full_name')
+    fname = request.form.get('fname')
+    lname = request.form.get('lname')
 
-    msg = f"Hi {full_name}, here is your total dry time for your creation: In Minutes: {dry_time_min} In Hours: {dry_time_hour:.1f} "
+    msg = f"Hi {fname} {lname}, here is your total dry time for your creation: In Minutes: {dry_time_min:.1f} In Hours: {dry_time_hour:.1f} "
 
 
     message = client.messages \
@@ -41,7 +41,7 @@ def send_sms_twilio():
 
     # print(message.sid)
     # return message.sid
-    return render_template("sms_sent.html", dry_time_min=dry_time_min, dry_time_hour=dry_time_hour, full_name=full_name, phone_number=phone_number)
+    return render_template("sms_sent.html", dry_time_min=dry_time_min, dry_time_hour=dry_time_hour, painting_name=painting_name,fname=fname,lname=lname, phone_number=phone_number)
 
 @app.route('/')
 def enterpage():
