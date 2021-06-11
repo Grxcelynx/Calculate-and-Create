@@ -22,8 +22,8 @@ client = Client(account_sid, auth_token)
 
 @app.route('/send_sms', methods=["POST"])
 def send_sms_twilio():
-    dry_time_min = int(request.form.get("dry_time"))
-    dry_time_hour = dry_time_min / 60
+    dry_time_min = float(request.form.get("dry_time"))
+    dry_time_hour = dry_time_min / 60.0
     painting_name = request.form.get("painting_name")
     phone_number = request.form.get('phone_number')
     fname = request.form.get('fname')
@@ -180,7 +180,7 @@ def show_creation_form():
 
 if __name__ == '__main__': 
     connect_to_db(app)
-    app.run(host='0.0.0.0', debug=True)
+    app.run(host='0.0.0.0', debug=True, port=5005)
 
 
 

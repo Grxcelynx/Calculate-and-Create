@@ -6,8 +6,7 @@
     
 
         <div class="alert alert-success" role="alert" style="background-color:#F3E4CE">
-            <h4 class="alert-heading" style="color:black">Calculation Created!!</h4>
-            <p class="hidden" name=creation_form value={{ creation_form.paint_type.paint_time }} + {{ creation_form.weather.weather_time }} + {{ creation_form.canvas_size.canvas_time }} => </p>
+            <h4 class="alert-heading" style="color:black">Calculation Created!</h4>
             <h5>Here are your final dry times calculated into hours and minutes for {{ creation_form.painting_name }}.</h5>
             <p>
                 This calculation has been formulated from your selection of: {{ creation_form.paint_type.paint_type }},
@@ -35,7 +34,8 @@
             <div class="input-group">
                 <span class="input-group-text">Phone Number</span>
                 <input name="phone_number" type="number" aria-label="Phone Number" class="form-control">
-                <input type="hidden" name="dry_time" value={{ creation_form.paint_type.paint_time }} + {{ creation_form.weather.weather_time }} + {{ creation_form.canvas_size.canvas_time }} >
+                <input type="hidden" name="dry_time" value={{ (creation_form.paint_type.paint_time + creation_form.weather.weather_time + creation_form.canvas_size.canvas_time) }} >
+                <input type="hidden" name="painting_name" value={{ creation_form.painting_name }}>
             </div>
             <button type="submit"id="sending-sms"> 
                 Send me my calculation!

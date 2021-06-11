@@ -14,7 +14,7 @@
       <h6 class="card-title">With your total dry time in:</h6>
       <p class="card-text">
           {{ dry_time_min }} Minutes or 
-          {{ dry_time_hour }} Hours
+          {{ "%.1f" |format(dry_time_hour) }} Hours
       </p>
       <p class="card-text"></p>
       <a href="/render_form" class="btn btn-outline-danger">Create Another Calculation</a>

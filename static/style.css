@@ -147,8 +147,7 @@ span.input-group-text{
 
 p.painting-name{
   background: linear-gradient(to right, #0625a2, #830505,#eec10a);
-  -webkit-text-fill-color: transparent;
-
+  /* -webkit-text-fill-color: transparent; */
 }
 
 input.form-control{
