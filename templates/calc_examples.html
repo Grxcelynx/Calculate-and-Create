@@ -1,16 +1,29 @@
-<div>
+<div class="example-p">
   {% extends 'base.html' %}
   
   <body>
     {% block body %}
     <h2>No time to calculate? Just Create! </h2>
     <h3>Check out these finished calculations</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+    </table>
+
+    <div class="examples-page"> 
 
 
-    <div> 
-
-      <p id="example">
-      </p>
+        <p id="example">
+          testing
+        </p>
+  
+      
       
     </div>
 
@@ -22,5 +35,30 @@
   </body>
 </div>
 
-
+<!-- <div class="list-group" id="example">
+  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">List group item heading</h5>
+      <small>3 days ago</small>
+    </div>
+    <p class="mb-1">Some placeholder content in a paragraph.</p>
+    <small>And some small print.</small>
+  </a>
+  <a href="#" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">List group item heading</h5>
+      <small class="text-muted">3 days ago</small>
+    </div>
+    <p class="mb-1">Some placeholder content in a paragraph.</p>
+    <small class="text-muted">And some muted small print.</small>
+  </a>
+  <a href="#" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">List group item heading</h5>
+      <small class="text-muted">3 days ago</small>
+    </div>
+    <p class="mb-1">Some placeholder content in a paragraph.</p>
+    <small class="text-muted">And some muted small print.</small>
+  </a>
+</div> -->
 

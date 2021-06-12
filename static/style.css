@@ -24,11 +24,16 @@ body {
   }
 
   h4 {
-    color: #0625a2;
+    color: #600101;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
   }
 
   h5 {
     color: #E29728;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
   }
 
   h6 {
@@ -69,7 +74,8 @@ li {
 }
 
 a {
-  color : #350150
+  color : #420066;
+
 
 }
 
@@ -117,11 +123,15 @@ div.container-fluid{
 
 img.creation-form-img {
   width: 270px;
+  padding-left: 2em;
+  padding-right: 1em;
 }
 
 img.paint-info-img {
   height: 250px;
   width: 275px;
+  padding-left: 7em;
+  padding-right: 1em;
 }
 
 img.example-img {
@@ -131,8 +141,20 @@ img.example-img {
 
 a.home-button {
   font-size: 1.3em;
+  color : #420066;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+div.homepage-words {
+  padding-top: 2em;
+  padding-right: 15em;
+  padding-left: 5em;
 }
 
+div.examples-page {
+  background: linear-gradient(to right,white,white,#F3E4CE,#F3E4CE,white);
+  /* width: 15em; */
+  font-size: 1.5em;
+}
 div.creation-form {
   align-items: center;
   text-align: center;
@@ -191,27 +213,28 @@ div.weather-type {
   display: grid;
   grid-template-columns: 3fr 3fr;
   /* grid-template-columns: 1fr 1fr 1fr; */
-  grid-gap: 10px;
+  /* grid-gap: 10px; */
   align-items: center;
+  text-align: center;
+  padding-bottom: 5em;
+  /* padding-top: 2em; */
 }
 
 div.info {
   border-radius: 1px;
-  /* border: 2px solid #F3E4CE; */
-  border: 2px solid black;
-  /* width: 22em; */
+  /* border: 2px solid black; */
+  background: linear-gradient(to left,white, #F3E4CE,white,white, white,#F3E4CE,white);
   height: 25em;
   margin: 2em;
   padding: 1em;
   display: inline-block;
   align-items: center;
-  width: 400px;
+  width: 600px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom:auto; 
   margin-top: auto;
 }
-
 
 img {
   height: 15em;
@@ -221,10 +244,21 @@ img {
 
 }
 
-div.alert {
-  text-align: center;
-  align-items: center;
-  background-color: #0625a2;
-  padding-left: 10em;
+
+
+button.result {
+  background: linear-gradient(to left,white,#F3E4CE,white);
+  border-color: white;
+  font-size: 1.8em;
+  color: black;
 }
 
+div.result {
+  text-align: center;
+  align-items: center;
+}
+
+div.example-p {
+  align-items: center;
+  text-align: center;
+}

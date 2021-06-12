@@ -22,7 +22,7 @@ $.getJSON("/example", function(data) {
         i < len; i ++) {
         var p = document.createElement('p');
         var row = data[i]
-        p.innerText = "Paint Used: " + row['paint'] + " Canvas Selected:   " + row['canvas'] + " Weather Condition:   " + row['weather'] + " Total Dry time:   " +  row['total'];
+        p.innerText =  row['paint'] + row['canvas'] + row['weather'] +  row['total'];
         ul.appendChild(p);
         }
     var element = document.getElementById("example");
