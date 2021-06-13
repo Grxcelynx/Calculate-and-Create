@@ -1,7 +1,7 @@
 const paintTypeInfoData = [
   {
     Paint: "Acrylic Paint",
-    About: "This is info about Acrylic",
+    About: "Acrylic paint is a fast-drying paint made of pigment suspended in acrylic polymer emulsion and plasticizers, silicon oils, defoamers, stabilizers, or metal soaps.[2] Most acrylic paints are water-based, but become water-resistant when dry. Depending on how much the paint is diluted with water, or modified with acrylic gels, mediums, or pastes, the finished acrylic painting can resemble a watercolor, a gouache, or an oil painting, or have its own unique characteristics not attainable with other media",
     imgURL: "/static/img/acrylic.jpeg",
     paintId: "1"
   },

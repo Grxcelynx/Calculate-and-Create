@@ -47,7 +47,9 @@ body {
 }
 
 p {
-  color: #850114;
+  /* color: blue; */
+  color: #780214;
+
   margin-left: auto;
   margin-right: auto;
   /* padding-left: 8em;
@@ -216,13 +218,13 @@ div.weather-type {
   /* grid-gap: 10px; */
   align-items: center;
   text-align: center;
-  padding-bottom: 5em;
+  padding-bottom: 10em;
   /* padding-top: 2em; */
 }
 
 div.info {
   border-radius: 1px;
-  /* border: 2px solid black; */
+  border: 2px solid black;
   background: linear-gradient(to left,white, #F3E4CE,white,white, white,#F3E4CE,white);
   height: 25em;
   margin: 2em;
@@ -230,6 +232,7 @@ div.info {
   display: inline-block;
   align-items: center;
   width: 600px;
+  height: 800px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom:auto; 
@@ -244,7 +247,11 @@ img {
 
 }
 
+.grid-2{
+  /* display:table-column-group; */
 
+
+}
 
 button.result {
   background: linear-gradient(to left,white,#F3E4CE,white);
@@ -258,7 +265,3 @@ div.result {
   align-items: center;
 }
 
-div.example-p {
-  align-items: center;
-  text-align: center;
-}

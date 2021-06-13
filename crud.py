@@ -34,17 +34,6 @@ def create_canvas_type(canvas_size, canvas_time):
     return canvas
 
 
-def create_examples(paint_used, canvas_selected, weather_condition, total_dry_time):
-    """Returning all the finished calculation examples for users to view
-    instead of creating their own."""
-
-    examples = CalcExamples(paint_used=paint_used, canvas_selected=canvas_selected, weather_condition=weather_condition, total_dry_time=total_dry_time)
-
-    db.session.add(examples)
-    db.session.commit()
-
-    return examples
-
 def get_weather_types():
     """Return all types of weather"""
     return Weather.query.all()
@@ -59,12 +48,6 @@ def get_paint_types():
     """Return all paint types."""
 
     return PaintType.query.all()
-
-def get_examples():
-    """Returning all the finished calculation examples for users to view
-    instead of creating their own."""
-
-    return CalcExamples.query.all()
 
 
 

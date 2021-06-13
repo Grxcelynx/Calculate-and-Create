@@ -57,19 +57,7 @@ for canvas in canvas_sizes:
     canvas_in_db.append(db_canvas)  ### maybe irrelevant? Not sure if needed?
 
 
-with open('./data/example_calcs.json') as e:
-    calc_examples = json.loads(e.read())
 
-    examples_in_db = []
-    for example in calc_examples:
-        paint_used = example['paint_used']
-        canvas_selected = example['canvas_selected']
-        weather_condition = example['weather_condition']
-        total_dry_time = example['total_dry_time']
-
-        db_examples= crud.create_examples(paint_used, canvas_selected, weather_condition, total_dry_time)
-
-        examples_in_db.append(db_examples)
 
 
 

@@ -29,7 +29,7 @@ def send_sms_twilio():
     fname = request.form.get('fname')
     lname = request.form.get('lname')
 
-    msg = f"Hi {fname} {lname}, here is your total dry time for your creation: In Minutes: {dry_time_min:.1f} In Hours: {dry_time_hour:.1f} "
+    msg = f"Hi {fname} {lname}, here is your total dry time for your creation: {painting_name}! In Minutes: {dry_time_min:.1f} In Hours: {dry_time_hour:.1f} "
 
 
     message = client.messages \
@@ -70,22 +70,18 @@ def show_all_paint_info():
 	return render_template("paint_info.html")
 
 
-@app.route('/example')
-def examples():
-    """Grabbing all example calculations to view"""
-    calc_examples = crud.get_examples()
-    all_examples = []
-    for ex in calc_examples:
-        example_obj = {}
-        example_obj['id'] = ex.example_id
-        example_obj['paint'] = ex.paint_used
-        example_obj['canvas'] = ex.canvas_selected
-        example_obj['weather'] = ex.weather_condition
-        example_obj['total'] = ex.total_dry_time
-        
-        all_examples.append(example_obj)
 
-    return jsonify(all_examples)
+@app.route('/example')
+def show_all_examples():
+    """Show all examples of calculated creations to users who don't want to go through the process"""
+
+    return render_template("calc_examples.html")
+
+@app.route("/calc_examples.html")
+def grab_examples():
+	"""Linking to hompeage."""
+
+	return render_template("homepage.html")
 
 
 @app.route('/get_paint_types')

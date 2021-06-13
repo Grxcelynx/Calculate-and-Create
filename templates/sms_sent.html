@@ -1,11 +1,12 @@
-<div class="card text-center">
-    {% extends 'base.html' %}
+{% extends 'base.html' %}
+
+<div class="card text-center" style="text-align: center;">
     {% block body %}
 
-    <div class="card-header">
+    <div class="card-header" style="text-align: center;">
         {{ fname }} {{ lname }}, your Calculation has been Created!   
      </div>
-    <div class="card-body">
+    <div class="card-body" style="text-align: center;">
       <h5 class="card-title">{{ painting_name }}</h5>
       <h6 class="card-title">Sent to:</h6>
       <p class="card-text">
@@ -19,7 +20,7 @@
       <p class="card-text"></p>
       <a href="/render_form" class="btn btn-outline-danger">Create Another Calculation</a>
     </div>
-    <div class="card-footer text-muted">
+    <div class="card-footer text-muted" style="text-align: center;">
         *Please note: All calculated dry times may vary on rapid climate changes
     </div>
     {% endblock %}  
