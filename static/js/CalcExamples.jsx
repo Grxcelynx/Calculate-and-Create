@@ -73,6 +73,7 @@ function CalcExamples(props) {
         PaintUsed={example.PaintUsed}
         CanvasSelected={example.CanvasSelected}
         WeatherCondition={example.WeatherCondition}
+        DryTime={example.DryTime}
         key={example.exampleId}
         />
       );

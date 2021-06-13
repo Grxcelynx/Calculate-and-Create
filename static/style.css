@@ -1,9 +1,7 @@
 
 
 body {
-    /* background-color: #F3E4CE; */
     font-family: "Trebuchet MS", Helvetica, sans-serif;
-
   }
 
   h1 {
@@ -14,46 +12,39 @@ body {
 
   h2 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #121954;
-
+    color: #600101;
+    text-align: center;
   }
 
   h3 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #E29728;
+    color: #600101;
   }
 
   h4 {
     color: #600101;
-    text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
   }
 
   h5 {
-    color: #E29728;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
+  color: #E29728;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
 
   h6 {
-    color:#E29728
+  color:#E29728
   }
+
 .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 p {
-  /* color: blue; */
   color: #780214;
-
   margin-left: auto;
   margin-right: auto;
-  /* padding-left: 8em;
-  padding-right: 8em; */
 }
 form {
   color: #780214;
@@ -64,25 +55,18 @@ form {
 select {
   color : #350150;
   margin-left: auto;
-    margin-right: auto;
+  margin-right: auto;
 }
 
 li {
   color : #E29728;
-  
-  /* background-color: #520000; */
-
-
 }
 
 a {
   color : #420066;
-
-
 }
 
 button.c-form {
-  /* background-color: #F3E4CE; */
   background: linear-gradient(to left,white,#F3E4CE,white);
   border-color: white;
   font-size: 2em;
@@ -112,7 +96,6 @@ div.rainbow-button {
   font-size: 2em;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: bold;
-  /* background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722); */
   background: linear-gradient(to right,grey,grey,black, #0625a2, #830505,#eec10a);
 
   -webkit-background-clip: text;
@@ -154,7 +137,6 @@ div.homepage-words {
 
 div.examples-page {
   background: linear-gradient(to right,white,white,#F3E4CE,#F3E4CE,white);
-  /* width: 15em; */
   font-size: 1.5em;
 }
 div.creation-form {
@@ -171,11 +153,9 @@ span.input-group-text{
 
 p.painting-name{
   background: linear-gradient(to right, #0625a2, #830505,#eec10a);
-  /* -webkit-text-fill-color: transparent; */
 }
 
 input.form-control{
-  /* text-align: center; */
   background: linear-gradient(to left, #052dce, #b30606,#f5c607,#3359f2, #e83939,#eedb0a,#5979fa, #df0cae,#fef37c,#052dce, #b30606,#f5c607,#3359f2, #e83939,#eedb0a,#5979fa, #df0cae,#fef37c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -214,23 +194,20 @@ div.weather-type {
 .grid {
   display: grid;
   grid-template-columns: 3fr 3fr;
-  /* grid-template-columns: 1fr 1fr 1fr; */
-  /* grid-gap: 10px; */
-  align-items: center;
-  text-align: center;
+  /* align-items: center;
+  text-align: center; */
   padding-bottom: 10em;
-  /* padding-top: 2em; */
 }
 
 div.info {
   border-radius: 1px;
   border: 2px solid black;
-  background: linear-gradient(to left,white, #F3E4CE,white,white, white,#F3E4CE,white);
+  background-image: radial-gradient(circle,#F3E4CE, #F3E4CE,white,white);
   height: 25em;
   margin: 2em;
   padding: 1em;
   display: inline-block;
-  align-items: center;
+  /* align-items: center; */
   width: 600px;
   height: 800px;
   margin-left: auto;
@@ -238,6 +215,8 @@ div.info {
   margin-bottom:auto; 
   margin-top: auto;
 }
+
+
 
 img {
   height: 15em;
@@ -248,8 +227,28 @@ img {
 }
 
 .grid-2{
-  /* display:table-column-group; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 1em;
 
+
+}
+
+div.examples {
+  border-radius: 1px;
+  background-image: radial-gradient(circle,#F3E4CE, #F3E4CE,white,white);
+  height: 20em;
+  margin: 2em;
+  padding: 2em;
+  display: inline-block;
+  align-items: center;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom:auto; 
+  margin-top: auto;
 
 }
 
