@@ -197,19 +197,20 @@ div.weather-type {
   /* align-items: center;
   text-align: center; */
   padding-bottom: 10em;
+  
 }
 
 div.info {
   border-radius: 1px;
-  border: 2px solid black;
+  border: 2px ;
   background-image: radial-gradient(circle,#F3E4CE, #F3E4CE,white,white);
-  height: 25em;
+  height: 35em;
   margin: 2em;
-  padding: 1em;
+  padding: 3em;
   display: inline-block;
   /* align-items: center; */
-  width: 600px;
-  height: 800px;
+  width: 650px;
+  height: 950px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom:auto; 
