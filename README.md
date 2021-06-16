@@ -78,7 +78,7 @@ pip install -r requirements.txt
 
 Sign up to use the [Twilio API](https://www.twilio.com/try-twilio/)
 
-Sign up to use the [Google Maps Javascript, Google Places and Geocoder APIs](https://cloud.google.com/maps-platform/)
+
 
 You will need to register for an API key. For the Python back-end, the key will need to be saved as below:
 
