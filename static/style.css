@@ -35,11 +35,6 @@ body {
   color:#E29728
   }
 
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 p {
   color: #780214;
@@ -71,12 +66,12 @@ button.c-form {
   border-color: white;
   font-size: 2em;
   color: black;
-
 }
 
 textarea {
   color : #350150
 }
+
 div.rainbow-button {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 7em;
@@ -97,14 +92,13 @@ div.rainbow-button {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: bold;
   background: linear-gradient(to right,grey,grey,black, #0625a2, #830505,#eec10a);
-
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 div.container-fluid{
   background-color: #F3E4CE;
 }
-
 
 img.creation-form-img {
   width: 270px;
@@ -121,7 +115,6 @@ img.paint-info-img {
 
 img.example-img {
   width: 280px;
-
 }
 
 a.home-button {
@@ -129,6 +122,7 @@ a.home-button {
   color : #420066;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
 div.homepage-words {
   padding-top: 2em;
   padding-right: 15em;
@@ -139,6 +133,7 @@ div.examples-page {
   background: linear-gradient(to right,white,white,#F3E4CE,#F3E4CE,white);
   font-size: 1.5em;
 }
+
 div.creation-form {
   align-items: center;
   text-align: center;
@@ -194,10 +189,7 @@ div.weather-type {
 .grid {
   display: grid;
   grid-template-columns: 3fr 3fr;
-  /* align-items: center;
-  text-align: center; */
-  padding-bottom: 10em;
-  
+  padding-bottom: 10em; 
 }
 
 div.info {
@@ -208,7 +200,6 @@ div.info {
   margin: 2em;
   padding: 3em;
   display: inline-block;
-  /* align-items: center; */
   width: 650px;
   height: 950px;
   margin-left: auto;
@@ -217,14 +208,11 @@ div.info {
   margin-top: auto;
 }
 
-
-
 img {
   height: 15em;
   align-items: center;
   background-color: #F3E4CE;
   background: transparent;
-
 }
 
 .grid-2{
@@ -233,8 +221,6 @@ img {
   align-items: center;
   text-align: center;
   padding-bottom: 1em;
-
-
 }
 
 div.examples {
@@ -250,7 +236,6 @@ div.examples {
   margin-right: auto;
   margin-bottom:auto; 
   margin-top: auto;
-
 }
 
 button.result {

@@ -22,6 +22,7 @@ client = Client(account_sid, auth_token)
 
 @app.route('/send_sms', methods=["POST"])
 def send_sms_twilio():
+    """Collecting user's dry time and sending it to their phone number"""
     dry_time_min = float(request.form.get("dry_time"))
     dry_time_hour = dry_time_min / 60.0
     painting_name = request.form.get("painting_name")
@@ -39,26 +40,24 @@ def send_sms_twilio():
                      to=phone_number
                  )
 
-    # print(message.sid)
-    # return message.sid
     return render_template("sms_sent.html", dry_time_min=dry_time_min, dry_time_hour=dry_time_hour, painting_name=painting_name,fname=fname,lname=lname, phone_number=phone_number)
 
 @app.route('/')
 def enterpage():
-    """View opening page"""
-    return render_template('open.html')
+    """View opening page, the landing page"""
+    return render_template('landing_page.html')
 
 
 @app.route('/homepage')
 def homepage():
-    """View homepage."""
+    """View homepage. Show's all options a user can choose"""
 
     return render_template('homepage.html')
 
 
 @app.route("/paint_info.html")
 def grab_all_paint_info():
-	"""Show all info about paint options for users to select to learn more about what they're creating with."""
+	"""Linking to Hompeage"""
 
 	return render_template("homepage.html")
 
@@ -68,7 +67,6 @@ def show_all_paint_info():
 	"""Show all info about paint options for users to select to learn more about what they're creating with."""
 
 	return render_template("paint_info.html")
-
 
 
 @app.route('/example')
@@ -83,6 +81,10 @@ def grab_examples():
 
 	return render_template("homepage.html")
 
+@app.route('/calc_examples')
+def go_to_examples():
+    """Display all examples for users to view"""
+    return render_template("calc_examples.html")
 
 @app.route('/get_paint_types')
 def get_paint_types():
@@ -95,9 +97,7 @@ def get_paint_types():
         paint_objects["type"] = paint.paint_type
 
         all_paint_info.append(paint_objects)
-    # return json.dumps(paint_types)
     return jsonify(all_paint_info)
-    # return render_template("creation_form.html", paints=all_paint_info)
 
 
 @app.route('/get_weather')
@@ -128,7 +128,6 @@ def get_canvas_sizes():
         all_canvas_info.append(canvas_objects)
 
     return jsonify(all_canvas_info)
-    # return canvas_sizes
 
 @app.route('/render_form')
 def render_form():
@@ -141,13 +140,9 @@ def render_form():
 
 @app.route('/creation_form.html')
 def go_to_form():
-        
+    """Linking to Homepage"""
+
     return render_template("homepage.html")
-
-@app.route('/calc_examples')
-def go_to_examples():
-
-    return render_template("calc_examples.html")
  
 
 
@@ -162,7 +157,6 @@ def collect_painting_input():
     
     creation_form = crud.create_creation_form(painting_name, canvas_size, weather_type, paint_type)
 
-    # return jsonify(creation_form.painting_name)   
     return render_template("result.html", creation_form=creation_form)
 
 

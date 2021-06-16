@@ -1,5 +1,5 @@
 """ CRUD operations. """
-from model import db, CreationForm, CanvasSize, Weather, PaintType, CalcExamples, connect_to_db
+from model import db, CreationForm, CanvasSize, Weather, PaintType, connect_to_db
 
 
 

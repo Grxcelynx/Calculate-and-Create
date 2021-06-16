@@ -5,12 +5,10 @@
 	<title>{% block title %}Calculate & Create{% endblock %}</title>
     <link href="/static/style.css" rel="stylesheet">
 
-	<!-- We'll load React dependencies on all pages for this app. -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
 	<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
 	<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
 
-	<!-- Include any page-specific Javascript using this block. -->
 	
     {% block js %}
     <script src="/static/js/CalcExamples.jsx" type="text/jsx"></script>
@@ -22,7 +20,6 @@
 
 </head>
 <body>
-	<!-- Include the page's content with this block. -->
     {% block body %}
 
 		<h2>Calculated Creations</h2>

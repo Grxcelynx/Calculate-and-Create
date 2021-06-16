@@ -22,12 +22,11 @@ paints_in_db = []
 for paints in paint_types:
     paint_type = paints['paint_type']
     paint_time = paints['paint_time']
-    # paint_photo = paints['paint_photo']
 
  
-    db_paint= crud.create_paint_types(paint_type, paint_time)  #<---this is the crud function for creating the table row of painttype
+    db_paint= crud.create_paint_types(paint_type, paint_time)
 
-    paints_in_db.append(db_paint)  ### maybe irrelevant? Not sure if needed?
+    paints_in_db.append(db_paint) 
 
 with open('./data/weather.json') as w:
     weather_conditions = json.loads(w.read()) 
@@ -40,7 +39,7 @@ for weather in weather_conditions:
  
     db_weather= crud.create_weather_type(weather_type, weather_time) 
 
-    weather_in_db.append(db_weather)  ### maybe irrelevant? Not sure if needed?
+    weather_in_db.append(db_weather) 
 
 
 with open('./data/canvas.json') as c:
@@ -54,7 +53,7 @@ for canvas in canvas_sizes:
   
     db_canvas= crud.create_canvas_type(canvas_size, canvas_time) 
 
-    canvas_in_db.append(db_canvas)  ### maybe irrelevant? Not sure if needed?
+    canvas_in_db.append(db_canvas)  
 
 
 

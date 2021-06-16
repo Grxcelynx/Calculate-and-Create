@@ -17,7 +17,7 @@ http://localhost:5005/
 * [Future Features](#future)
 * [Installation](installation)
 
-## <a name="tech-stack"></a> Technologies 
+## <a name="tech-stack"></a> Technologies      
 * Python
 * Flask
 * Jinja2

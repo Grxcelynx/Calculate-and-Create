@@ -20,7 +20,6 @@ class CreationForm(db.Model):
     canvas_size = db.relationship("CanvasSize", back_populates="creation_form")
     weather = db.relationship("Weather", back_populates="creation_form")
     paint_type = db.relationship("PaintType", back_populates="creation_form")
-    # final_result = db.relationship('FinalResult', back_populates='creation_form') -NOT USING RELATIONSHIP ANYMORE
 
     def __repr__(self):
         return f'<CreationForm creation_form_id ={self.creation_form_id} painting_name={self.painting_name}>'  
@@ -64,7 +63,6 @@ class PaintType(db.Model):
     paint_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     paint_type = db.Column(db.Text, unique=True)
     paint_time = db.Column(db.Integer)
-    # paint_photo = db.Column(db.Text, unique=True)
 
     creation_form = db.relationship('CreationForm', uselist=False, back_populates='paint_type')
 
@@ -72,16 +70,6 @@ class PaintType(db.Model):
     def __repr__(self):
         return f'<PaintType paint_id ={self.paint_id} paint_type={self.paint_type}>'
 
-class CalcExamples(db.Model):
-    """User can view set calculations if they do not want to go through calculation process"""
-
-    __tablename__ = "calc_examples"
-    
-    example_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    paint_used = db.Column(db.Text)
-    canvas_selected = db.Column(db.Text)
-    weather_condition = db.Column(db.Text)
-    total_dry_time = db.Column(db.Text)
        
 
 
