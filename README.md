@@ -63,7 +63,7 @@ Clone this repo:
 https://github.com/Grxcelynx/Calculate-and-Create-HBProject2021
 ```
 
-Create and activate a virtual enviornment inside you Calculate 7 Create directory:
+Create and activate a virtual enviornment inside you Calculate & Create directory:
 
 ```
 virtual env
