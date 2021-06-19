@@ -35,6 +35,8 @@ http://localhost:5005/
 #### Landing Page 
 Users click on Calculate & Create to create!
 
+# <img src= "https://github.com/Grxcelynx/Calculate-and-Create-HBProject2021/blob/main/1_0_GIF_2.GIF" alt= "landing gif">
+
 #### Home Page 
 Users can view all optins provided for the website. They can choose to create a calculation, view pre calaculated dry times, and information about the types of paints and their drying formula.
 
