@@ -48,7 +48,7 @@ To help users understand their results of their calculation as well as to inform
 
 #### Examples
 While many people can be in a rush, this currated page of set calculations is for any users that don't have time or want to go through the calculation process. 
-<img src="https://github.com/Grxcelynx/Calculate-and-Create-HBProject2021/blob/main/1_0_GIF_2%203.GIF" alt ="examples"
+# <img src="https://github.com/Grxcelynx/Calculate-and-Create-HBProject2021/blob/main/1_0_GIF_2%203.GIF" alt ="examples">
 ## <a name="future"></a> Calculate & Keep Creating 
 There are new features planned for addiontal sprints:
 * Allowing users to post their finished creations 
