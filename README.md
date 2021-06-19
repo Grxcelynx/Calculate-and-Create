@@ -35,7 +35,7 @@ http://localhost:5005/
 #### Landing Page 
 Users click on Calculate & Create to create!
 
-# <img src= "https://github.com/Grxcelynx/Calculate-and-Create-HBProject2021/blob/main/1_0_GIF_2.GIF" alt= "landing gif">
+# <img src= "https://github.com/Grxcelynx/Calculate-and-Create-HBProject2021/blob/main/1_0_GIF_2.GIF" alt= "landing-gif">
 
 #### Home Page 
 Users can view all optins provided for the website. They can choose to create a calculation, view pre calaculated dry times, and information about the types of paints and their drying formula.
@@ -45,7 +45,7 @@ User gets to name their creation, select their choice of paint, size of canvas, 
 
 #### Paint Info
 To help users understand their results of their calculation as well as to inform any new artists, users can learn more about each paint type and paint thinner. 
-
+# <img src="https://github.com/Grxcelynx/Calculate-and-Create-HBProject2021/blob/main/1_0_GIF_2%202.GIF" alt="paint=info">
 #### Examples
 While many people can be in a rush, this currated page of set calculations is for any users that don't have time or want to go through the calculation process. 
 # <img src="https://github.com/Grxcelynx/Calculate-and-Create-HBProject2021/blob/main/1_0_GIF_2%203.GIF" alt ="examples">
