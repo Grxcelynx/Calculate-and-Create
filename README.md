@@ -43,7 +43,7 @@ Users can view all optins provided for the website. They can choose to create a 
 #### Create
 User gets to name their creation, select their choice of paint, size of canvas, and what their current weather condition is. All hree values are calculated using jinja to return the users output of their final dry time in minutes and hours. If a user wants to save their creation, they can simply send themsleves their calculation info in a snap. By using the Twilio SMS API any user that inputs their name and phone number will recive their own calaculation with their creation name and dry time in minutes and hours. 
 # <img src="https://github.com/Grxcelynx/Calculate-and-Create-HBProject2021/blob/main/1_0_GIF_2%204.GIF" alt="creation">
-# <img src="https://github.com/Grxcelynx/Calculate-and-Create-HBProject2021/blob/main/Twilio%20Confirm.png" alt="twilio">
+# <img src="https://github.com/Grxcelynx/Calculate-and-Create-HBProject2021/blob/main/twilio.png" alt="twilio">
 #### Paint Info
 To help users understand their results of their calculation as well as to inform any new artists, users can learn more about each paint type and paint thinner. 
 # <img src="https://github.com/Grxcelynx/Calculate-and-Create-HBProject2021/blob/main/1_0_GIF_2%202.GIF" alt="paint=info">
