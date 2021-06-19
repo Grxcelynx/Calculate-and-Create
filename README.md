@@ -5,7 +5,7 @@ Calclate & Create came from my own personal expirience as an artist. As a painte
 
 ## About the developer
 
-Before Hackbright Academy, Grace was a Professional makeup artist who worked within the beauty industry doing photoshoots, short films, retail sales, and even making lipstick by hand. After almost 4 full years of makeup artistry, her artistic passion moved onto the more technical side. After attending a bootcamp prep at App Academy, she found a new joy in the puzzles of code. She set a new course in the software engineering world and landed at Hackbright.
+Before Hackbright Academy, Grace was a Professional makeup artist who worked within the beauty industry doing photoshoots, short films, retail sales, and even making lipstick by hand. After almost 4 full years of makeup artistry, her artistic passion moved onto the more technical side. After attending a bootcamp prep at App Academy, she found a new joy in the puzzles of code. She set a new course in the software engineering world and landed at Hackbright. 
 
 ## Deployment 
 
