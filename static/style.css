@@ -4,36 +4,36 @@ body {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
   }
 
-  h1 {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #780214;
-    align-self: center;
-  }
-
-  h2 {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #600101;
-    text-align: center;
-  }
-
-  h3 {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #600101;
-  }
-
-  h4 {
-    color: #600101;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  }
-
-  h5 {
-  color: #E29728;
+h1 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  }
+  color: #780214;
+  align-self: center;
+}
 
-  h6 {
-  color:#E29728
-  }
+h2 {
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #600101;
+  text-align: center;
+}
+
+h3 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #600101;
+}
+
+h4 {
+  color: #600101;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h5 {
+color: #E29728;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h6 {
+color:#E29728
+}
 
 
 p {

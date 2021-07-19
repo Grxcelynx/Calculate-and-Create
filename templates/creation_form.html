@@ -5,7 +5,7 @@
   
   {% block body %}
   
-  <form class="creation-form" action="/creation_post" method="POST"> 
+  <form autocomplete="off" class="creation-form" action="/creation_post" method="POST"> 
 
         <div class="input-group flex-nowrap">
           <span name="painting_name" class="input-group-text" id="addon-wrapping">Enter Painting Name:</span>
@@ -61,6 +61,6 @@
           </p>
         </div>   
   </form>
-    {% endblock %} 
+  {% endblock %} 
 </div>
 
