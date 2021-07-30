@@ -8,6 +8,9 @@ Calclate & Create came from my own personal expirience as an artist. As a painte
 Grace got her start in the Cosmetic Beauty industry, working alongside corporate companies with largely client based roles, while freelancing as a lead Makeup Artist for multiple media platforms. After 4 years, she decided to shift her artistic eye to the art of programming. With Makeup Artistry being an interactive, visual, and hands on job, she found the problem solving of code and collaboration of paired programming to be a new form of creativity. She then began taking multiple prep courses and utilizing her creative side. By implementing new frameworks, learning new languages, and databases she is excited to further her career as a Software Engineer.
 ## View Demo Video 
 https://www.youtube.com/embed/kAA_E5DfwLo
+
+## Visit live site
+https://www.calculateandcreate.art/
 ## Deployment 
 
 http://localhost:5005/
