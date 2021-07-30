@@ -19,7 +19,7 @@ http://localhost:5005/
 * [Tech Stack](#teach-stack)
 * [Features](#features)
 * [Future Features](#future)
-* [Installation](installation)
+* [Installation](#installation)
 
 ## <a name="tech-stack"></a> Technologies      
 * Python
