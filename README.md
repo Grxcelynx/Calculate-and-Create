@@ -1,3 +1,4 @@
+# SITE NOT LIVE ANYMORE
 # <img src="https://github.com/Grxcelynx/Calculate-and-Create-HBProject2021/blob/main/Calculate%26Create.png" alt="Calculate & Create">
 
 Calclate & Create came from my own personal expirience as an artist. As a painter who uses all different kinds of paint mediums, It was always a challenge to organize my timeline for my next piece or have messed up a painting by touching it before it was dry. Especially considering many artists have multiple jobs and can feel as though their creation time is cut short due to life and work. Calculate & Create allows users to configure their estimated dry time for their artwork. While an artist's mind is always turning, a user can now focus more on their creation and process rather than worry about time constaints. 
